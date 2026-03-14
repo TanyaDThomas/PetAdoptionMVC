@@ -1,0 +1,53 @@
+﻿@model IEnumerable<PetAdoptionMVC.Models.Adopter>
+
+@{
+    ViewData["Title"] = "List of Adopters";
+}
+
+<h2>List of Adopters</h2>
+<hr />
+
+<p><a asp-action="Create" class="btn btn-primary">Add an Adopter</a></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+      @foreach(var adopter in Model)
+        {
+            <tr>
+                <td>@adopter.FirstName</td>
+                <td>@adopter.LastName</td>
+                <td>@adopter.Address</td>
+                <td>@adopter.City</td>
+                <td>@adopter.State</td>
+                <td>@adopter.PhoneNumber</td>
+                <td>@adopter.Email</td>
+                 <td>
+                     <a asp-action="Details" asp-controller="Adopter"
+                        asp-route-id="@adopter.Id"
+                        class="btn btn-sm btn-info">Details</a>
+
+                    <a asp-action="Edit" asp-controller="Adopter"
+                       asp-route-id="@adopter.Id"
+                       class="btn btn-sm btn-warning">Edit</a>
+
+                    <a asp-action="Deactivate" asp-controller="Adopter"
+                       asp-route-id="@adopter.Id"
+                       class="btn btn-sm btn-danger">Remove</a>
+                 </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot></tfoot>
+</table>

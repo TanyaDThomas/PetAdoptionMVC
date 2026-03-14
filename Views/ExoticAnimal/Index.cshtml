@@ -1,0 +1,62 @@
+﻿@model IEnumerable<PetAdoptionMVC.Models.ExoticAnimal>
+
+@{
+    ViewData["Title"] = "List of Exotic Animals";
+}
+
+<h2>List of Exotic Animals</h2>
+<hr />
+
+<p><a asp-action="Create" class="btn btn-primary">Add New Exotic Animal</a></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Animal Family</th>
+            <th>Species</th>
+            <th>Age</th>
+            <th>Handleable</th>
+            <th>Aggressive</th>
+            <th>Venomous</th>
+            <th>Vaccinated</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var exoticAnimal in Model)
+        {
+            <tr>
+                <td>@exoticAnimal.Name</td>
+                <td>@exoticAnimal.AnimalFamily</td>
+                <td>@exoticAnimal.Species</td>
+                <td>@exoticAnimal.Age</td>
+                <td>@(exoticAnimal.IsHandleable ? "Yes" : "No")</td>
+                <td>@(exoticAnimal.IsAggressive ? "Yes" : "No")</td>
+                <td>@(exoticAnimal.IsVenomous ? "Yes" : "No")</td>
+                <td>@(exoticAnimal.IsVaccinated ? "Yes" : "No" )</td>
+                <td>@(exoticAnimal.IsAdopted ? "Adopted" : "Available")</td>
+                <td>
+                    <a asp-action="Details" asp-controller="ExoticAnimal"
+                        asp-route-id="@exoticAnimal.Id"
+                        asp-route-returnUrl ="/ExoticAnimal"
+                        class="btn btn-sm btn-info">Details</a>
+
+                    <a asp-action="Edit" asp-controller="ExoticAnimal"
+                       asp-route-id="@exoticAnimal.Id"
+                       asp-route-returnUrl="/ExoticAnimal"
+                       class="btn btn-sm btn-warning">Edit</a>
+
+                    <a asp-action="Deactivate" asp-controller="ExoticAnimal"
+                        asp-route-id="@exoticAnimal.Id"
+                        asp-route-returnUrl="/ExoticAnimal"
+                        class="btn btn-sm btn-danger">Remove</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfooter>
+
+    </tfooter>
+</table>

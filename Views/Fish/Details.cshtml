@@ -1,0 +1,73 @@
+﻿@model PetAdoptionMVC.Models.Fish
+
+@{
+    ViewData["Title"] = "Fish Details";
+}
+
+<h2>@Model.Name Details</h2>
+<hr />
+
+<div class="row ">
+    <div class="col-md-6">
+        <h4>Basic Information</h4>
+        <hr />
+
+        <dl class="row">
+            <dt class="col-sm-4">Name</dt>
+            <dd class="col-sm-8">@Model.Name</dd>
+            <dt class="col-sm-4">Species</dt>
+            <dd class="col-sm-8">@Model.Species</dd>
+            <dt class="col-sm-4">Color</dt>
+            <dd class="col-sm-8">@Model.Color</dd>
+            <dt class="col-sm-4">Age</dt>
+            <dd class="col-sm-8">@Model.Age</dd>
+            <dt class="col-sm-4">Date Of Birth</dt>
+            <dd class="col-sm-8">@Model.DOB.ToShortDateString()</dd>
+            <dt class="col-sm-4">Adoption Fee</dt>
+            <dd class="col-sm-8">@Model.AdoptionFee.ToString("C")</dd>
+            <dt class="col-sm-4">Status</dt>
+            <dd class="col-sm-8">@(Model.IsAdopted ? "Adopted" : "Available")</dd>
+        </dl>
+    </div>
+
+    <div class="col-md-6">
+        <h4>Behavior & Needs</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-5">Community Friendly</dt>
+            <dd class="col-sm-7">@(Model.IsCommunityFriendly ? "Yes" : "No")</dd>
+            <dt class="col-sm-5">Aggressive</dt>
+            <dd class="col-sm-7">@(Model.IsAggressive ? "Yes" : "No")</dd>
+            <dt class="col-sm-5">Salt Water</dt>
+            <dd class="col-sm-7">@(Model.NeedsSaltwater ? "Yes" : "No")</dd>
+            <dt class="col-sm-5">Tank Size</dt>
+            <dd class="col-sm-7">@Model.TankSizeInLiters</dd>
+            <dt class="col-sm-5">Needs Heater</dt>
+            <dd class="col-sm-7">@(Model.NeedsHeater ? "Yes" : "No")</dd>
+            <dt class="col-sm-5">Needs Filter</dt>
+            <dd class="col-sm-7">@(Model.NeedsFilter ? "Yes" : "No")</dd>
+        </dl>
+    </div>
+    <div class="col-md-6">
+        <h4>Health</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-5">Vaccinated</dt>
+            <dd class="col-sm-7">@(Model.IsVaccinated ? "Yes" : "No")</dd>
+            <dt class="col-sm-5">Special Care Needs</dt>
+            <dd class="col-sm-7">@(Model.HasSpecialCareNeeds ? "Yes" : "No")</dd>
+            <dt class="col-sm-5">Special Diet</dt>
+            <dd class="col-sm-7">@(Model.HasSpecialDiet ? "Yes" : "No")</dd>
+        </dl>
+    </div>
+</div>
+
+
+<div class="mt-3">
+    <a asp-action="Edit" asp-asp-controller="Fish"
+        asp-route-id="@Model.Id"
+        asp-route-returnUrl="/Fish"
+        class="btn btn-sm btn-warning">Edit</a>
+
+    <a href="@ViewBag.ReturnUrl" class="btn btn-secondary">Back to List</a>
+</div>

@@ -1,0 +1,66 @@
+﻿@model IEnumerable<PetAdoptionMVC.Models.Dog>
+
+
+@{
+    ViewData["Title"] = "Dogs";
+}
+
+<h2>List of Dogs</h2>
+
+<p><a asp-action="Create" class="btn btn-primary" >Add New Dog</a></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Breed</th>
+            <th>Age</th>
+            <th>Color</th>
+            <th>House Trained</th>
+            <th>Good With Kids</th>
+            <th>Good With Pets</th>
+            <th>Vaccinated</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var dog in Model)
+        {
+            <tr>
+                <td>@dog.Name</td>
+                <td>@dog.Breed</td>
+                <td>@dog.Age</td>
+                <td>@dog.Color</td>
+                <td>@(dog.IsHouseTrained ? "Yes" : "No")</td>
+                <td>@(dog.IsGoodWithChildren ? "Yes" : "No")</td>
+                <td>@(dog.IsGoodWithOtherPets ? "Yes" : "No")</td>
+                <td>@(dog.IsVaccinated ? "Yes" : "No")</td>
+                <td>@(dog.IsAdopted ? "Adopted" : "Available")</td>
+                <td>
+                    @* <a asp-action="Details" asp-route-id="@dog.Id"
+                        class="btn btn-sm btn-info">Details</a> 
+                       <a asp-action="Edit" asp-route-id="@dog.Id"
+                        class="btn btn-sm btn-warning">Edit</a> *@
+                    <a asp-action="Details" asp-controller="Dog"
+                       asp-route-id="@dog.Id"
+                       asp-route-returnUrl="/Dog"
+                       class="btn btn-sm btn-info">Details</a>
+
+                    <a asp-action="Edit" asp-controller="Dog"
+                       asp-route-id="@dog.Id"
+                       asp-route-returnUrl="/Dog"
+                       class="btn btn-sm btn-warning">Edit</a>
+
+                    <a asp-action="Deactivate" asp-route-id="@dog.Id"
+                        class="btn btn-sm btn-danger">Remove</a>
+                </td>
+                
+            </tr>
+        }
+    </tbody>
+    <tfooter>
+       
+
+    </tfooter>
+</table>

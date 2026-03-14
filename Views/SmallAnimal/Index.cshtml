@@ -1,0 +1,60 @@
+﻿@model IEnumerable<PetAdoptionMVC.Models.SmallAnimal>
+
+@{
+    ViewData["Title"] = "List of Small Animals";
+}
+
+<h2>List of Small Animals</h2>
+<hr />
+
+<p><a asp-action="Create" class="btn btn-primary">Add a Small Animal</a></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Species</th>
+            <th>Age</th>
+            <th>Color</th>
+            <th>Good With Kids</th>
+            <th>Good With Other Pets</th>
+            <th>Handleable</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var smallAnimal in Model)
+        {
+            <tr>
+                <td>@smallAnimal.Name</td>
+                <td>@smallAnimal.Species</td>
+                <td>@smallAnimal.Age</td>
+                <td>@smallAnimal.Color</td>
+                <td>@(smallAnimal.IsGoodWithChildren ? "Yes" : "No")</td>
+                <td>@(smallAnimal.IsGoodWithOtherPets ? "Yes" : "No")</td>
+                <td>@(smallAnimal.IsHandleable ? "Yes" : "No")</td>
+                <td>@(smallAnimal.IsAdopted ? "Adopted" : "Available")</td>
+                <td>
+                    <a asp-action="Details" asp-asp-controller="SmallAnimal"
+                       asp-route-id="@smallAnimal.Id"
+                       asp-route-returnUrl="/SmallAnimal"
+                       class="btn btn-sm btn-info">Details</a>
+
+                    <a asp-action="Edit" asp-controller="SmallAnimal"
+                       asp-route-id="@smallAnimal.Id"
+                       asp-route-returnUrl="/SmallAnimal"
+                       class="btn btn-sm btn-warning">Edit</a>
+
+                    <a asp-action="Deactivate" asp-controller="SmallAnimal"
+                       asp-route-id="@smallAnimal.Id"
+                       asp-route-returnUrl="/SmallAnimal"
+                       class="btn btn-sm btn-danger">Remove</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfooter></tfooter>
+</table>
+
+ 

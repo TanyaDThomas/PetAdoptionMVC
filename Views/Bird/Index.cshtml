@@ -1,0 +1,63 @@
+﻿@model IEnumerable<PetAdoptionMVC.Models.Bird>
+
+@{
+    ViewData["TItle"]= "List of Birds";
+}
+
+<h2>List of Birds</h2>
+<hr />
+
+<p><a asp-action="Create" class="btn btn-primary">Create a New Bird</a></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Species</th>
+            <th>Age</th>
+            <th>Color</th>
+            <th>Hand Tamed</th>
+            <th>Good With Kids</th>
+            <th>Good With Other Birds</th>
+            <th>Vaccinated</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach(var bird in Model)
+        {
+            <tr>
+                <td>@bird.Name</td>
+                <td>@bird.Species</td>
+                <td>@bird.Age</td>
+                <td>@bird.Color</td>
+                <td>@(bird.IsHandTamed ? "Yes" : "No")</td>
+                <td>@(bird.IsGoodWithChildren ? "Yes" : "No")</td>
+                <td>@(bird.IsVaccinated ? "Yes" : "No")</td>
+                <td>@(bird.IsAdopted ? "Adopted" : "Available")</td>
+                <td>
+                    <a asp-action="Details" asp-controller="Bird"
+                        asp-route-id="@bird.Id"
+                        asp-route-returnUrl="/Bird"
+                        class="btn btn-sm btn-info">Details</a>
+
+                    <a asp-action="Edit"
+                       asp-controller="Bird"
+                       asp-route-id="@bird.Id"
+                       asp-route-returnUrl="/Bird"
+                       class="btn btn-sm btn-warning">Edit</a>
+
+                    <a asp-action="Deactivate" asp-controller="Bird"
+                        asp-route-id="@bird.Id"
+                        asp-route-returnUrl="/Bird"
+                        class="btn btn-sm btn-danger">Remove</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+    <tfooter></tfooter>
+
+</table>

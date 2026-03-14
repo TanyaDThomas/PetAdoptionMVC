@@ -1,0 +1,1921 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\adoption.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\adoption.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\adoption\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\adoption\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\adoption\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\adoption\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\adoption\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\adoption\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\controllers\\adoptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:controllers\\adoptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\services\\adoptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:services\\adoptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\services\\animalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:services\\animalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\controllers\\animalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:controllers\\animalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\searchfilters\\animalsearchfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:searchfilters\\animalsearchfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\contracts\\ianimalqueryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:contracts\\ianimalqueryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\services\\adopterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:services\\adopterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\contracts\\iadoptionqueryservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:contracts\\iadoptionqueryservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\searchfilters\\adoptionsearchfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:searchfilters\\adoptionsearchfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\viewmodels\\adoptioneditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:viewmodels\\adoptioneditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\viewmodels\\adoptionindexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:viewmodels\\adoptionindexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\viewmodels\\adoptiondetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:viewmodels\\adoptiondetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\viewmodels\\adoptioncreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:viewmodels\\adoptioncreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\animal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\animal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\controllers\\adoptercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:controllers\\adoptercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\services\\noteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:services\\noteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\contracts\\ipaymentqueryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:contracts\\ipaymentqueryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\contracts\\inoteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:contracts\\inoteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\contracts\\inotequeryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:contracts\\inotequeryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\contracts\\ianimalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:contracts\\ianimalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\contracts\\iadoptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:contracts\\iadoptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\contracts\\iadopterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:contracts\\iadopterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\contracts\\iadopterqueryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:contracts\\iadopterqueryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\searchfilters\\adoptersearchfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:searchfilters\\adoptersearchfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\searchfilters\\warningsearchfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:searchfilters\\warningsearchfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\searchfilters\\paymentsearchfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:searchfilters\\paymentsearchfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\searchfilters\\notesearchfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:searchfilters\\notesearchfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\adopter\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\adopter\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\adopter\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\adopter\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\smallanimal\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\smallanimal\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\smallanimal\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\smallanimal\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\farmanimal\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\farmanimal\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\adopter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\adopter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\adoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\adoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\enums\\adoptionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\enums\\adoptionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\warning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\warning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\adopter\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\adopter\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\bird\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\bird\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\bird.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\bird.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\adopter\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\adopter\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\bird\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\bird\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\bird\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\bird\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\smallanimal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\smallanimal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\exoticanimal\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\exoticanimal\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\farmanimal\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\farmanimal\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\fish\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\fish\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\smallanimal\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\smallanimal\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\fish\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\fish\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\smallanimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\smallanimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\fish\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\fish\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\fish\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\fish\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\controllers\\smallanimalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:controllers\\smallanimalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\controllers\\fishcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:controllers\\fishcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\controllers\\catcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:controllers\\catcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\reptile\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\reptile\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\reptile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\reptile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\reptile\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\reptile\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\reptile\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\reptile\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\controllers\\reptilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:controllers\\reptilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\reptile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\reptile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\controllers\\dogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:controllers\\dogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\controllers\\farmanimalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:controllers\\farmanimalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\controllers\\birdcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:controllers\\birdcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\farmanimal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\farmanimal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\exoticanimal\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\exoticanimal\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\exoticanimal\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\exoticanimal\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\exoticanimal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\exoticanimal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\cat\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\cat\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\dog\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\dog\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\farmanimal\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\farmanimal\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\bird\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\bird\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\cat\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\cat\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\dog\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\dog\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\dog\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\dog\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\cat\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\cat\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\fish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\fish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\dog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\dog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\controllers\\exoticanimalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:controllers\\exoticanimalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\farmanimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\farmanimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\enums\\animaltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\enums\\animaltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\cat\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\cat\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\exoticanimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\exoticanimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Migrations\\20260306210547_AddInitial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260306210547_AddInitial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\migrations\\20260307160229_addanimaltypetoanimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:migrations\\20260307160229_addanimaltypetoanimal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\services\\warningservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:services\\warningservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\migrations\\20260306211443_addinitial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:migrations\\20260306211443_addinitial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\data\\petadoptiondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:data\\petadoptiondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\contracts\\iwarningqueryservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:contracts\\iwarningqueryservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\enums\\paymenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\enums\\paymenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\enums\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\enums\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\enums\\creditcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\enums\\creditcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\contracts\\iwarningservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:contracts\\iwarningservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\contracts\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:contracts\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\enums\\noteentitytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\enums\\noteentitytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\enums\\notecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\enums\\notecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\enums\\warningseverity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\enums\\warningseverity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\enums\\warningtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\enums\\warningtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\dog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\dog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|c:\\users\\savet\\onedrive\\documents\\c# projects\\asp\\mvc\\petadoptionmvc\\models\\cat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB0BBE76-2940-EED2-E8B8-70ED301E9B33}|PetAdoptionMVC.csproj|solutionrelative:models\\cat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Adoption\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Adoption\\Create.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Adoption\\Create.cshtml",
+              "RelativeToolTip": "Views\\Adoption\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-14T16:43:25.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Adoption\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Adoption\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Adoption\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Adoption\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-14T16:43:09.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Adoption\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Adoption\\Details.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Adoption\\Details.cshtml",
+              "RelativeToolTip": "Views\\Adoption\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-14T16:43:01.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Adoption.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Adoption.cshtml",
+              "RelativeDocumentMoniker": "Views\\Adoption.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Adoption.cshtml",
+              "RelativeToolTip": "Views\\Adoption.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-14T16:41:24.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdoptionController.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\AdoptionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdoptionController.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\AdoptionController.cs",
+              "RelativeToolTip": "Controllers\\AdoptionController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T16:36:05.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AdoptionIndexViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\ViewModels\\AdoptionIndexViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AdoptionIndexViewModel.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\ViewModels\\AdoptionIndexViewModel.cs",
+              "RelativeToolTip": "ViewModels\\AdoptionIndexViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T16:12:46.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AdoptionEditViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\ViewModels\\AdoptionEditViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AdoptionEditViewModel.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\ViewModels\\AdoptionEditViewModel.cs",
+              "RelativeToolTip": "ViewModels\\AdoptionEditViewModel.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAA8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T16:10:54.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AdoptionDetailsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\ViewModels\\AdoptionDetailsViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AdoptionDetailsViewModel.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\ViewModels\\AdoptionDetailsViewModel.cs",
+              "RelativeToolTip": "ViewModels\\AdoptionDetailsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T16:07:52.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AdoptionCreateViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\ViewModels\\AdoptionCreateViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AdoptionCreateViewModel.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\ViewModels\\AdoptionCreateViewModel.cs",
+              "RelativeToolTip": "ViewModels\\AdoptionCreateViewModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T16:04:35.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Adopter\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Adopter\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Adopter\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Adopter\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T19:11:34.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Adopter\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Adopter\\Create.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Adopter\\Create.cshtml",
+              "RelativeToolTip": "Views\\Adopter\\Create.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAACwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T18:39:20.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Adopter\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Adopter\\Details.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Adopter\\Details.cshtml",
+              "RelativeToolTip": "Views\\Adopter\\Details.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAD4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T18:19:24.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Adopter\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Adopter\\Index.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Adopter\\Index.cshtml",
+              "RelativeToolTip": "Views\\Adopter\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T18:19:04.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AdopterController.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\AdopterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdopterController.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\AdopterController.cs",
+              "RelativeToolTip": "Controllers\\AdopterController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T18:03:00.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\SmallAnimal\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\SmallAnimal\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\SmallAnimal\\Edit.cshtml",
+              "RelativeToolTip": "Views\\SmallAnimal\\Edit.cshtml",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAAHQAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T17:53:57.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\SmallAnimal\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\SmallAnimal\\Create.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\SmallAnimal\\Create.cshtml",
+              "RelativeToolTip": "Views\\SmallAnimal\\Create.cshtml",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAABUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T17:49:42.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\SmallAnimal\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\SmallAnimal\\Details.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\SmallAnimal\\Details.cshtml",
+              "RelativeToolTip": "Views\\SmallAnimal\\Details.cshtml",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAAEsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T17:43:54.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\SmallAnimal\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\SmallAnimal\\Index.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\SmallAnimal\\Index.cshtml",
+              "RelativeToolTip": "Views\\SmallAnimal\\Index.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAwDsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T17:19:10.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "SmallAnimalController.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\SmallAnimalController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SmallAnimalController.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\SmallAnimalController.cs",
+              "RelativeToolTip": "Controllers\\SmallAnimalController.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAAFMAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T16:57:50.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Reptile\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reptile\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Reptile\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Reptile\\Edit.cshtml",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAAAJMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T16:47:53.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Reptile\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reptile\\Create.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Reptile\\Create.cshtml",
+              "RelativeToolTip": "Views\\Reptile\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T16:42:03.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Reptile\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reptile\\Details.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Reptile\\Details.cshtml",
+              "RelativeToolTip": "Views\\Reptile\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T16:34:43.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Reptile\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reptile\\Index.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Reptile\\Index.cshtml",
+              "RelativeToolTip": "Views\\Reptile\\Index.cshtml",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAACkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T16:28:20.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "ReptileController.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\ReptileController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReptileController.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\ReptileController.cs",
+              "RelativeToolTip": "Controllers\\ReptileController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAADwv04AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T16:01:14.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Fish\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Fish\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Fish\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Fish\\Edit.cshtml",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAAHgAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T15:34:28.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Fish\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Fish\\Create.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Fish\\Create.cshtml",
+              "RelativeToolTip": "Views\\Fish\\Create.cshtml",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T15:17:52.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Fish\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Fish\\Details.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Fish\\Details.cshtml",
+              "RelativeToolTip": "Views\\Fish\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T15:03:27.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Fish\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Fish\\Index.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Fish\\Index.cshtml",
+              "RelativeToolTip": "Views\\Fish\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T14:18:23.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "FishController.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\FishController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FishController.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\FishController.cs",
+              "RelativeToolTip": "Controllers\\FishController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAFQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T13:55:07.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\FarmAnimal\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\FarmAnimal\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\FarmAnimal\\Edit.cshtml",
+              "RelativeToolTip": "Views\\FarmAnimal\\Edit.cshtml",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAAAHEAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T13:00:58.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\FarmAnimal\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\FarmAnimal\\Create.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\FarmAnimal\\Create.cshtml",
+              "RelativeToolTip": "Views\\FarmAnimal\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T12:52:06.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\FarmAnimal\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\FarmAnimal\\Details.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\FarmAnimal\\Details.cshtml",
+              "RelativeToolTip": "Views\\FarmAnimal\\Details.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAAD4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T02:11:19.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "FarmAnimal.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\FarmAnimal.cs",
+              "RelativeDocumentMoniker": "Models\\FarmAnimal.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\FarmAnimal.cs",
+              "RelativeToolTip": "Models\\FarmAnimal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T22:07:16.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\FarmAnimal\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\FarmAnimal\\Index.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\FarmAnimal\\Index.cshtml",
+              "RelativeToolTip": "Views\\FarmAnimal\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-13T01:43:50.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "FarmAnimalController.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\FarmAnimalController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FarmAnimalController.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\FarmAnimalController.cs",
+              "RelativeToolTip": "Controllers\\FarmAnimalController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T16:22:26.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\ExoticAnimal\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\ExoticAnimal\\Details.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\ExoticAnimal\\Details.cshtml",
+              "RelativeToolTip": "Views\\ExoticAnimal\\Details.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAFkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-11T17:53:47.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\ExoticAnimal\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\ExoticAnimal\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\ExoticAnimal\\Edit.cshtml",
+              "RelativeToolTip": "Views\\ExoticAnimal\\Edit.cshtml",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-11T16:47:31.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\ExoticAnimal\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\ExoticAnimal\\Create.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\ExoticAnimal\\Create.cshtml",
+              "RelativeToolTip": "Views\\ExoticAnimal\\Create.cshtml",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAAFkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-11T16:25:45.167Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\ExoticAnimal\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\ExoticAnimal\\Index.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\ExoticAnimal\\Index.cshtml",
+              "RelativeToolTip": "Views\\ExoticAnimal\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACYAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-11T16:25:34.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "ExoticAnimalController.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\ExoticAnimalController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ExoticAnimalController.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\ExoticAnimalController.cs",
+              "RelativeToolTip": "Controllers\\ExoticAnimalController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T14:15:40.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Bird\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Bird\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Bird\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Bird\\Edit.cshtml",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAAAIQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-10T19:51:32.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Bird\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Bird\\Details.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Bird\\Details.cshtml",
+              "RelativeToolTip": "Views\\Bird\\Details.cshtml",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-10T19:51:17.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Bird\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Bird\\Create.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Bird\\Create.cshtml",
+              "RelativeToolTip": "Views\\Bird\\Create.cshtml",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAIEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-10T19:51:06.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Bird\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Bird\\Index.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Bird\\Index.cshtml",
+              "RelativeToolTip": "Views\\Bird\\Index.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAC0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-10T19:50:58.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "BirdController.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\BirdController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BirdController.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\BirdController.cs",
+              "RelativeToolTip": "Controllers\\BirdController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAEIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T19:16:15.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-10T17:30:31.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Cat\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cat\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Cat\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Cat\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-09T19:00:33.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Cat\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cat\\Create.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Cat\\Create.cshtml",
+              "RelativeToolTip": "Views\\Cat\\Create.cshtml",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAAFwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-09T19:00:24.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Cat\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cat\\Details.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Cat\\Details.cshtml",
+              "RelativeToolTip": "Views\\Cat\\Details.cshtml",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAAEkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-09T19:00:14.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Cat\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cat\\Index.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Cat\\Index.cshtml",
+              "RelativeToolTip": "Views\\Cat\\Index.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAAC0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-09T18:59:50.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "CatController.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\CatController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CatController.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\CatController.cs",
+              "RelativeToolTip": "Controllers\\CatController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAACEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T18:53:20.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Dog\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dog\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Dog\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Dog\\Edit.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-09T14:39:58.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Dog\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dog\\Details.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Dog\\Details.cshtml",
+              "RelativeToolTip": "Views\\Dog\\Details.cshtml",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-09T14:21:37.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Dog\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dog\\Create.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Dog\\Create.cshtml",
+              "RelativeToolTip": "Views\\Dog\\Create.cshtml",
+              "ViewState": "AgIAABYAAAAAAAAAAAAYwDAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-09T13:13:32.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Dog\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dog\\Index.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Dog\\Index.cshtml",
+              "RelativeToolTip": "Views\\Dog\\Index.cshtml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAABcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-09T13:13:01.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "DogController.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\DogController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DogController.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\DogController.cs",
+              "RelativeToolTip": "Controllers\\DogController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAADgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T19:37:26.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-08T15:28:25.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-08T15:28:25.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-08T15:28:25.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-08T15:28:25.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AnimalController.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\AnimalController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AnimalController.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\AnimalController.cs",
+              "RelativeToolTip": "Controllers\\AnimalController.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAWwFsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T16:07:17.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 96,
+              "Title": "20260307160229_AddAnimalTypeToAnimal.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Migrations\\20260307160229_AddAnimalTypeToAnimal.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260307160229_AddAnimalTypeToAnimal.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Migrations\\20260307160229_AddAnimalTypeToAnimal.cs",
+              "RelativeToolTip": "Migrations\\20260307160229_AddAnimalTypeToAnimal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T16:02:29.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Services\\PaymentService.cs",
+              "RelativeDocumentMoniker": "Services\\PaymentService.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Services\\PaymentService.cs",
+              "RelativeToolTip": "Services\\PaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T21:30:01.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 97,
+              "Title": "WarningService.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Services\\WarningService.cs",
+              "RelativeDocumentMoniker": "Services\\WarningService.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Services\\WarningService.cs",
+              "RelativeToolTip": "Services\\WarningService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T21:29:48.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "NoteService.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Services\\NoteService.cs",
+              "RelativeDocumentMoniker": "Services\\NoteService.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Services\\NoteService.cs",
+              "RelativeToolTip": "Services\\NoteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T21:29:36.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 98,
+              "Title": "20260306211443_AddInitial.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Migrations\\20260306211443_AddInitial.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260306211443_AddInitial.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Migrations\\20260306211443_AddInitial.cs",
+              "RelativeToolTip": "Migrations\\20260306211443_AddInitial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T21:14:43.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "20260306210547_AddInitial.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Migrations\\20260306210547_AddInitial.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260306210547_AddInitial.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Migrations\\20260306210547_AddInitial.cs",
+              "RelativeToolTip": "Migrations\\20260306210547_AddInitial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T21:05:48.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 99,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-06T20:43:54.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 100,
+              "Title": "PetAdoptionDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Data\\PetAdoptionDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\PetAdoptionDbContext.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Data\\PetAdoptionDbContext.cs",
+              "RelativeToolTip": "Data\\PetAdoptionDbContext.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAFIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T19:57:50.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IPaymentQueryService.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IPaymentQueryService.cs",
+              "RelativeDocumentMoniker": "Contracts\\IPaymentQueryService.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IPaymentQueryService.cs",
+              "RelativeToolTip": "Contracts\\IPaymentQueryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T18:10:10.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "INoteQueryService.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\INoteQueryService.cs",
+              "RelativeDocumentMoniker": "Contracts\\INoteQueryService.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\INoteQueryService.cs",
+              "RelativeToolTip": "Contracts\\INoteQueryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T18:08:39.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 101,
+              "Title": "IWarningQueryServices.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IWarningQueryServices.cs",
+              "RelativeDocumentMoniker": "Contracts\\IWarningQueryServices.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IWarningQueryServices.cs",
+              "RelativeToolTip": "Contracts\\IWarningQueryServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T18:06:49.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IAnimalQueryService.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IAnimalQueryService.cs",
+              "RelativeDocumentMoniker": "Contracts\\IAnimalQueryService.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IAnimalQueryService.cs",
+              "RelativeToolTip": "Contracts\\IAnimalQueryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T18:03:13.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IAdoptionQueryServices.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IAdoptionQueryServices.cs",
+              "RelativeDocumentMoniker": "Contracts\\IAdoptionQueryServices.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IAdoptionQueryServices.cs",
+              "RelativeToolTip": "Contracts\\IAdoptionQueryServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T18:02:00.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IAdopterQueryService.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IAdopterQueryService.cs",
+              "RelativeDocumentMoniker": "Contracts\\IAdopterQueryService.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IAdopterQueryService.cs",
+              "RelativeToolTip": "Contracts\\IAdopterQueryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T17:55:48.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 102,
+              "Title": "PaymentType.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\PaymentType.cs",
+              "RelativeDocumentMoniker": "Models\\Enums\\PaymentType.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\PaymentType.cs",
+              "RelativeToolTip": "Models\\Enums\\PaymentType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T17:32:30.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 103,
+              "Title": "PaymentStatus.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\PaymentStatus.cs",
+              "RelativeDocumentMoniker": "Models\\Enums\\PaymentStatus.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\PaymentStatus.cs",
+              "RelativeToolTip": "Models\\Enums\\PaymentStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T19:10:43.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "PaymentSearchFilter.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\SearchFilters\\PaymentSearchFilter.cs",
+              "RelativeDocumentMoniker": "SearchFilters\\PaymentSearchFilter.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\SearchFilters\\PaymentSearchFilter.cs",
+              "RelativeToolTip": "SearchFilters\\PaymentSearchFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T19:05:23.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 104,
+              "Title": "CreditCard.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\CreditCard.cs",
+              "RelativeDocumentMoniker": "Models\\Enums\\CreditCard.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\CreditCard.cs",
+              "RelativeToolTip": "Models\\Enums\\CreditCard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T18:09:48.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 105,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Payment.cs",
+              "RelativeDocumentMoniker": "Models\\Payment.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Payment.cs",
+              "RelativeToolTip": "Models\\Payment.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T18:06:22.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "WarningSearchFilter.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\SearchFilters\\WarningSearchFilter.cs",
+              "RelativeDocumentMoniker": "SearchFilters\\WarningSearchFilter.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\SearchFilters\\WarningSearchFilter.cs",
+              "RelativeToolTip": "SearchFilters\\WarningSearchFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T17:57:58.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "NoteSearchFilter.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\SearchFilters\\NoteSearchFilter.cs",
+              "RelativeDocumentMoniker": "SearchFilters\\NoteSearchFilter.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\SearchFilters\\NoteSearchFilter.cs",
+              "RelativeToolTip": "SearchFilters\\NoteSearchFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T17:34:56.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 106,
+              "Title": "IWarningService.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IWarningService.cs",
+              "RelativeDocumentMoniker": "Contracts\\IWarningService.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IWarningService.cs",
+              "RelativeToolTip": "Contracts\\IWarningService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T17:24:33.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "INoteService.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\INoteService.cs",
+              "RelativeDocumentMoniker": "Contracts\\INoteService.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\INoteService.cs",
+              "RelativeToolTip": "Contracts\\INoteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T17:24:13.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Animal\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Animal\\Index.cshtml",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Views\\Animal\\Index.cshtml",
+              "RelativeToolTip": "Views\\Animal\\Index.cshtml",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-05T16:51:01.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AdoptionSearchFilter.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\SearchFilters\\AdoptionSearchFilter.cs",
+              "RelativeDocumentMoniker": "SearchFilters\\AdoptionSearchFilter.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\SearchFilters\\AdoptionSearchFilter.cs",
+              "RelativeToolTip": "SearchFilters\\AdoptionSearchFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T16:16:40.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AnimalSearchFilter.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\SearchFilters\\AnimalSearchFilter.cs",
+              "RelativeDocumentMoniker": "SearchFilters\\AnimalSearchFilter.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\SearchFilters\\AnimalSearchFilter.cs",
+              "RelativeToolTip": "SearchFilters\\AnimalSearchFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T15:13:22.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "AdopterSearchFilter.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\SearchFilters\\AdopterSearchFilter.cs",
+              "RelativeDocumentMoniker": "SearchFilters\\AdopterSearchFilter.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\SearchFilters\\AdopterSearchFilter.cs",
+              "RelativeToolTip": "SearchFilters\\AdopterSearchFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T00:35:37.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAjwCAAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T22:48:29.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AnimalService.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Services\\AnimalService.cs",
+              "RelativeDocumentMoniker": "Services\\AnimalService.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Services\\AnimalService.cs",
+              "RelativeToolTip": "Services\\AnimalService.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAWwGoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T22:47:34.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdoptionService.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Services\\AdoptionService.cs",
+              "RelativeDocumentMoniker": "Services\\AdoptionService.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Services\\AdoptionService.cs",
+              "RelativeToolTip": "Services\\AdoptionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T22:47:23.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AdopterService.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Services\\AdopterService.cs",
+              "RelativeDocumentMoniker": "Services\\AdopterService.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Services\\AdopterService.cs",
+              "RelativeToolTip": "Services\\AdopterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T22:47:11.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 107,
+              "Title": "IPaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IPaymentService.cs",
+              "RelativeDocumentMoniker": "Contracts\\IPaymentService.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IPaymentService.cs",
+              "RelativeToolTip": "Contracts\\IPaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T22:46:45.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IAdoptionService.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IAdoptionService.cs",
+              "RelativeDocumentMoniker": "Contracts\\IAdoptionService.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IAdoptionService.cs",
+              "RelativeToolTip": "Contracts\\IAdoptionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T22:46:30.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IAdopterService.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IAdopterService.cs",
+              "RelativeDocumentMoniker": "Contracts\\IAdopterService.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IAdopterService.cs",
+              "RelativeToolTip": "Contracts\\IAdopterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T22:45:29.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IAnimalService.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IAnimalService.cs",
+              "RelativeDocumentMoniker": "Contracts\\IAnimalService.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Contracts\\IAnimalService.cs",
+              "RelativeToolTip": "Contracts\\IAnimalService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T22:44:48.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 108,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T22:11:26.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "ExoticAnimal.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\ExoticAnimal.cs",
+              "RelativeDocumentMoniker": "Models\\ExoticAnimal.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\ExoticAnimal.cs",
+              "RelativeToolTip": "Models\\ExoticAnimal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T22:06:23.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "SmallAnimal.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\SmallAnimal.cs",
+              "RelativeDocumentMoniker": "Models\\SmallAnimal.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\SmallAnimal.cs",
+              "RelativeToolTip": "Models\\SmallAnimal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T22:05:05.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "AnimalType.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\AnimalType.cs",
+              "RelativeDocumentMoniker": "Models\\Enums\\AnimalType.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\AnimalType.cs",
+              "RelativeToolTip": "Models\\Enums\\AnimalType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T21:39:46.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 109,
+              "Title": "NoteEntityType.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\NoteEntityType.cs",
+              "RelativeDocumentMoniker": "Models\\Enums\\NoteEntityType.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\NoteEntityType.cs",
+              "RelativeToolTip": "Models\\Enums\\NoteEntityType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T21:37:31.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 110,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T21:27:39.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 111,
+              "Title": "NoteCategory.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\NoteCategory.cs",
+              "RelativeDocumentMoniker": "Models\\Enums\\NoteCategory.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\NoteCategory.cs",
+              "RelativeToolTip": "Models\\Enums\\NoteCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T21:21:35.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Note.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Note.cs",
+              "RelativeDocumentMoniker": "Models\\Note.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Note.cs",
+              "RelativeToolTip": "Models\\Note.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T21:20:04.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 112,
+              "Title": "WarningSeverity.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\WarningSeverity.cs",
+              "RelativeDocumentMoniker": "Models\\Enums\\WarningSeverity.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\WarningSeverity.cs",
+              "RelativeToolTip": "Models\\Enums\\WarningSeverity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T19:01:29.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 113,
+              "Title": "WarningType.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\WarningType.cs",
+              "RelativeDocumentMoniker": "Models\\Enums\\WarningType.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\WarningType.cs",
+              "RelativeToolTip": "Models\\Enums\\WarningType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T19:00:03.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Warning.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Warning.cs",
+              "RelativeDocumentMoniker": "Models\\Warning.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Warning.cs",
+              "RelativeToolTip": "Models\\Warning.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T18:54:05.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "AdoptionStatus.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\AdoptionStatus.cs",
+              "RelativeDocumentMoniker": "Models\\Enums\\AdoptionStatus.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Enums\\AdoptionStatus.cs",
+              "RelativeToolTip": "Models\\Enums\\AdoptionStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T18:39:48.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Adoption.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Adoption.cs",
+              "RelativeDocumentMoniker": "Models\\Adoption.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Adoption.cs",
+              "RelativeToolTip": "Models\\Adoption.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T18:37:34.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Adopter.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Adopter.cs",
+              "RelativeDocumentMoniker": "Models\\Adopter.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Adopter.cs",
+              "RelativeToolTip": "Models\\Adopter.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACgAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T18:36:51.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "Reptile.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Reptile.cs",
+              "RelativeDocumentMoniker": "Models\\Reptile.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Reptile.cs",
+              "RelativeToolTip": "Models\\Reptile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T18:32:53.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "Fish.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Fish.cs",
+              "RelativeDocumentMoniker": "Models\\Fish.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Fish.cs",
+              "RelativeToolTip": "Models\\Fish.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T18:32:20.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 114,
+              "Title": "Dog.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Dog.cs",
+              "RelativeDocumentMoniker": "Models\\Dog.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Dog.cs",
+              "RelativeToolTip": "Models\\Dog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T18:27:54.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 115,
+              "Title": "Cat.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Cat.cs",
+              "RelativeDocumentMoniker": "Models\\Cat.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Cat.cs",
+              "RelativeToolTip": "Models\\Cat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T18:26:49.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Bird.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Bird.cs",
+              "RelativeDocumentMoniker": "Models\\Bird.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Bird.cs",
+              "RelativeToolTip": "Models\\Bird.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T18:17:28.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Animal.cs",
+              "DocumentMoniker": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Animal.cs",
+              "RelativeDocumentMoniker": "Models\\Animal.cs",
+              "ToolTip": "C:\\Users\\savet\\OneDrive\\Documents\\C# PROJECTS\\ASP\\MVC\\PetAdoptionMVC\\Models\\Animal.cs",
+              "RelativeToolTip": "Models\\Animal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T18:16:35.151Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

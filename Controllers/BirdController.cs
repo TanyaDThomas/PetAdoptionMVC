@@ -1,0 +1,93 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using PetAdoptionMVC.Contracts;
+using PetAdoptionMVC.Models;
+using PetAdoptionMVC.Models.Enums;
+
+namespace PetAdoptionMVC.Controllers
+{
+    public class BirdController : Controller
+    {
+        private readonly IAnimalQueryService _queryService;
+        private readonly IAnimalService _animalService;
+
+        public BirdController(IAnimalQueryService queryService, IAnimalService animalService)
+        {
+            _queryService = queryService;   
+            _animalService = animalService;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var animals = await _queryService.GetByTypeAsync(AnimalType.Bird);
+            var birds = animals.OfType<Bird>();
+            ViewBag.ReturnUrl = "/Bird";
+
+            return View(birds);
+        }
+
+
+        // GET Details Bird 5
+        public async Task<IActionResult> Details(int id, string? returnUrl = null)
+        {
+            var animal = await _queryService.GetByIdAsync(id);
+            var bird = animal as Bird;
+            if (bird == null) return NotFound();
+            ViewBag.ReturnUrl = returnUrl ?? "/Bird";
+            return View(bird);
+        }
+
+        //GET Create Bird
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        //POST Create bird
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Bird bird)
+        {
+            if(ModelState.IsValid)
+            {
+                bird.AnimalType = AnimalType.Bird;
+                await _animalService.CreateAnimalAsync(bird);
+                return RedirectToAction("Index");
+            }
+            return View(bird);
+        }
+
+        //GET Edit Bird 5
+        public async Task<IActionResult> Edit(int id, string? returnUrl = null)
+        {
+            var animal = await _queryService.GetByIdAsync(id);
+            var bird = animal as Bird;
+            if (bird == null) return NotFound();
+            ViewBag.ReturnUrl = returnUrl ?? "/Bird";
+            return View(bird);
+        }
+
+        //POST Edit Bird 5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(Bird bird)
+        {
+            if (ModelState.IsValid)
+            {
+                bird.AnimalType = AnimalType.Bird;
+                await _animalService.UpdateAsync(bird);
+                return RedirectToAction("Index");
+            }
+            return View(bird);
+        }
+
+        //GET Bird 5
+        public async Task<IActionResult> Deactivate(int id)
+        {
+            await _animalService.DeactivateAsync(id);
+            return RedirectToAction("Index");
+        }
+
+
+    }
+
+}

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<PetAdoptionMVC.Models.Fish>
+
+@{
+    ViewData["Title"]= "List of Fish";
+}
+
+<h2>List of Fish</h2>
+<hr />
+
+<p><a asp-action="Create" class="btn btn-primary">Add a Fish</a></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Species</th>
+            <th>Age</th>
+            <th>Color</th>
+            <th>Salt Water</th>
+            <th>Community Friendly</th>
+            <th>Aggressive</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var fish in Model)
+        {
+            <tr>
+                <td>@fish.Name</td>
+                <td>@fish.Species</td>
+                <td>@fish.Age</td>
+                <td>@fish.Color</td>
+                <td>@(fish.NeedsSaltwater ? "Yes" : "No")</td>
+                <td>@(fish.IsCommunityFriendly ? "Yes" : "No")</td>
+                <td>@(fish.IsAggressive ? "Yes" : "No")</td>
+                <td>@(fish.IsAdopted ? "Adopted" : "Available")</td>
+                <td>
+                    <a asp-action="Details" asp-asp-controller="Fish"
+                        asp-route-id="@fish.Id"
+                        asp-route-returnUrl ="/Fish"
+                        class="btn btn-sm btn-info">Details</a>
+
+                    <a asp-action="Edit" asp-controller="Fish"
+                        asp-route-id="@fish.Id"
+                        asp-route-returnUrl="/Fish"
+                        class="btn btn-sm btn-warning">Edit</a>
+
+                    <a asp-action="Deactivate" asp-controller="Fish"
+                        asp-route-id="@fish.Id"
+                        asp-route-returnUrl="/Fish"
+                        class="btn btn-sm btn-danger">Remove</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfooter></tfooter>
+</table>
+
+      
