@@ -1,4 +1,4 @@
-﻿@model PetAdoptionMVC.Models.Adoption
+﻿@model PetAdoptionMVC.ViewModels.AdoptionDetailsViewModel
 
 @{
     ViewData["Title"] = "Adoption Details";
@@ -6,3 +6,76 @@
 
 <h2>Adoption Details</h2>
 <br />
+
+<div class="row">
+    <div class="col-md-6">
+        <h4>Basic Adoption Information</h4>
+        <hr />
+
+        <dl class="row">
+            <dt class="col-sm-4">Adoption Date</dt>
+            <dd class="col-sm-8">@Model.AdoptionDate.ToShortDateString()</dd>
+
+            <dt class="col-sm-4">Adoption Status</dt>
+            <dd class="col-sm-8">@Model.Status</dd>
+
+            <dt class="col-sm-4">Adoption Fee</dt>
+            <dd class="col-sm-8">@Model.AdoptionFee.ToString("C")</dd>
+
+            <dt class="col-sm-4">Animal Type</dt>
+            <dd class="col-sm-8">@Model.AnimalType</dd>
+
+            <dt class="col-sm-4">Is Active</dt>
+            <dd class="col-sm-8">@Model.IsActive</dd>
+
+            <dt class="col-sm-4">Created On</dt>
+            <dd class="col-sm-8">@Model.CreatedOn.ToShortDateString()</dd>
+        </dl>
+    </div>
+
+    <div class="col-md-6">
+        <h4>Basic Adopter Information</h4>
+        <hr />
+
+        <dl class="row">
+            <dt class="col-sm-5">Adopter Name</dt>
+            <dd class="col-sm-8">@Model.AdopterFullName</dd>
+
+            <dt class="col-sm-5">Phone Number</dt>
+            <dd class="col-sm-8">@Model.AdopterPhone</dd>
+
+            <dt class="col-sm-5">Email</dt>
+            <dd class="col-sm-8">@Model.AdopterEmail</dd>
+
+            <dt class="col-sm-5">City</dt>
+            <dd class="col-sm-8">@Model.AdopterCity</dd>
+
+            <dt class="col-sm-5">State</dt>
+            <dd class="col-sm-8">@Model.AdopterState</dd>
+
+        </dl>
+    </div>
+
+    <div class="col-md-6">
+        <h4>Basic Animal Information</h4>
+        <hr />
+
+        <dl class="row">
+            <dt class="col-sm-5">Animal Name</dt>
+            <dd class="col-sm-8">@Model.AnimalName</dd>
+
+            <dt class="col-sm-5">Age</dt>
+            <dd class="col-sm-8">@Model.AnimalAge</dd>
+
+            <dt class="col-sm-5">Color</dt>
+            <dd class="col-sm-8">@Model.AnimalColor</dd>
+
+        </dl>
+    </div>
+
+    <div class="mt-3">
+        <a asp-action="Edit" asp-route-it="@Model.Id" class="btn btn-warning">Edit</a>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+
+</div>

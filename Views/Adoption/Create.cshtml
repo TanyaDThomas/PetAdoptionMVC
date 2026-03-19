@@ -1,4 +1,4 @@
-﻿@model PetAdoptionMVC.Models.Adoption
+﻿@model PetAdoptionMVC.ViewModels.AdoptionCreateViewModel
 
 @{
     ViewData["Title"] = "Create a New Adoption";
@@ -7,4 +7,15 @@
 <h2>Add a New Adoption</h2>
 <br />
 
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
+    <h4>Basic Information</h4>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-6">
+            <label 
+        </div>
+    </div>
+</form>
