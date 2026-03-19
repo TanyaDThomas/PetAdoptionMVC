@@ -219,8 +219,8 @@ namespace PetAdoptionMVC.Controllers
                 adoption.AdoptionFee = viewModel.AdoptionFee;
                 adoption.UpdatedOn = DateTime.Now;
 
-                // If status changed to Returned
-                // mark animal as available again
+                // If Returned, mark animal as available 
+         
                 if (viewModel.Status == AdoptionStatus.Returned)
                 {
                     var animal = await _animalQueryService

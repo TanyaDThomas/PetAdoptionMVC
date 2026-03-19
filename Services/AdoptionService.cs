@@ -22,6 +22,7 @@ namespace PetAdoptionMVC.Services
         public async Task<IEnumerable<Adoption>> GetAllAsync()
         {
             return await _context.Adoptions
+                .AsNoTracking()
                 .Where(a => a.IsActive)
                 .Include(a => a.Adopter)
                 .OrderByDescending(a => a.AdoptionDate)
@@ -46,7 +47,7 @@ namespace PetAdoptionMVC.Services
         public async Task<IEnumerable<Adoption>> GetByAnimalIdAsync(int animalId)
         {
             return await _context.Adoptions
-                .Where(a => a.AnimalId == animalId && a.IsActive)
+                .Where(a => a.IsActive && a.AnimalId == animalId)
                 .OrderByDescending(a => a.AdoptionDate)
                 .ToListAsync();
         }
@@ -54,6 +55,7 @@ namespace PetAdoptionMVC.Services
         public async Task<int> GetReturnCountByAnimalAsync(int animalId)
         {
             return await _context.Adoptions
+                .AsNoTracking()
                 .CountAsync(a => a.AnimalId == animalId &&
                     a.Status == AdoptionStatus.Returned);
         }
@@ -61,6 +63,7 @@ namespace PetAdoptionMVC.Services
         public async Task<int> GetReturnCountByAdopterAsync(int adopterId)
         {
             return await _context.Adoptions
+                .AsNoTracking()
                 .CountAsync(a => a.AdopterId == adopterId &&
                     a.Status == AdoptionStatus.Returned);
         }
@@ -68,9 +71,10 @@ namespace PetAdoptionMVC.Services
         public async Task<IEnumerable<Adoption>> SearchAsync(
             AdoptionSearchFilter filter)
         {
-            var query = _context.Adoptions
-                .Include(a => a.Adopter)
-                .Where(a => a.IsActive);
+             IQueryable<Adoption> query = _context.Adoptions
+                .AsNoTracking()
+                .Where(a => a.IsActive)
+                .Include(a => a.Adopter);
 
             if (!string.IsNullOrEmpty(filter.AdopterName))
                 query = query.Where(a =>
@@ -122,6 +126,7 @@ namespace PetAdoptionMVC.Services
             try
             {
                 adoption.UpdatedOn = DateTime.Now;
+                adoption.UpdatedBy = "System";
                 _context.Entry(adoption).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
                 return true;
@@ -140,6 +145,7 @@ namespace PetAdoptionMVC.Services
             if (adoption == null) return false;
             adoption.Status = status;
             adoption.UpdatedOn = DateTime.Now;
+            adoption.UpdatedBy = "System";
             await _context.SaveChangesAsync();
             return true;
         }
@@ -151,6 +157,7 @@ namespace PetAdoptionMVC.Services
             if (adoption == null) return false;
             adoption.IsActive = false;
             adoption.UpdatedOn = DateTime.Now;
+            adoption.UpdatedBy = "System";
             await _context.SaveChangesAsync();
             return true;
         }

@@ -1,0 +1,1405 @@
+﻿/* =====================================================
+   Forever Home Rescue Network — Main Stylesheet
+   forever-home.css
+   ===================================================== */
+
+/* =====================
+   CSS Variables
+===================== */
+:root {
+    --sidebar-w: 220px;
+    --header-h: 58px;
+    --footer-h: 40px;
+    /* Brand Colors */
+    --brown-dark: #3D2314;
+    --brown-mid: #6B3A22;
+    --brown-light: #A0522D;
+    --tan: #F5ECD7;
+    --tan-dark: #EAD9BC;
+    --red: #C0392B;
+    --red-light: #E74C3C;
+    --cream: #FDF8F0;
+    /* Text */
+    --text-dark: #2C1A0E;
+    --text-mid: #6B3A22;
+    --text-muted: #9E7B5A;
+}
+
+/* =====================
+   Base Reset
+===================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    background: var(--cream);
+    color: var(--text-dark);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =====================
+   TOP NAVBAR
+===================== */
+.fh-navbar {
+    height: var(--header-h);
+    background: var(--brown-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+}
+
+.fh-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 18px;
+    height: 100%;
+    background: var(--brown-mid);
+    width: var(--sidebar-w);
+    text-decoration: none;
+    transition: width 0.3s ease;
+}
+
+.fh-brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.fh-brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--tan);
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.fh-brand-tagline {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 2px;
+    white-space: nowrap;
+}
+
+.fh-navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Hamburger button — hidden on desktop */
+.fh-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 34px;
+    height: 34px;
+    background: rgba(255,255,255,0.08);
+    border: 0.5px solid rgba(255,255,255,0.15);
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 0;
+}
+
+    .fh-hamburger span {
+        display: block;
+        width: 16px;
+        height: 1.5px;
+        background: var(--tan);
+        border-radius: 2px;
+        transition: all 0.25s ease;
+    }
+
+    /* Hamburger → X animation */
+    .fh-hamburger.open span:nth-child(1) {
+        transform: translateY(6.5px) rotate(45deg);
+    }
+
+    .fh-hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .fh-hamburger.open span:nth-child(3) {
+        transform: translateY(-6.5px) rotate(-45deg);
+    }
+
+/* Bell icon button */
+.fh-icon-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 0.5px solid rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+
+    .fh-icon-btn:hover {
+        background: rgba(255,255,255,0.15);
+    }
+
+/* Sign In button */
+.fh-signin-btn {
+    height: 32px;
+    padding: 0 16px;
+    background: var(--red);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+    .fh-signin-btn:hover {
+        background: var(--red-light);
+        color: #fff;
+    }
+
+/* =====================
+   SIDEBAR
+===================== */
+.fh-sidebar {
+    width: var(--sidebar-w);
+    background: var(--brown-mid);
+    position: fixed;
+    top: var(--header-h);
+    left: 0;
+    bottom: var(--footer-h);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 150;
+    transition: transform 0.3s ease;
+}
+
+/* Sidebar overlay (mobile only) */
+.fh-sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 140;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+    .fh-sidebar-overlay.visible {
+        opacity: 1;
+    }
+
+.fh-sidebar-section {
+    padding: 16px 0 8px;
+}
+
+.fh-sidebar-label {
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 0 18px 8px;
+    display: block;
+}
+
+.fh-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    color: rgba(245, 236, 215, 0.75);
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    border-left: 3px solid transparent;
+    text-decoration: none;
+}
+
+    .fh-nav-item:hover {
+        background: rgba(255,255,255,0.08);
+        color: var(--tan);
+        border-left-color: rgba(192,57,43,0.5);
+    }
+
+    .fh-nav-item.active {
+        background: rgba(192,57,43,0.2);
+        color: var(--tan);
+        border-left-color: var(--red);
+    }
+
+    .fh-nav-item svg {
+        width: 17px;
+        height: 17px;
+        flex-shrink: 0;
+        opacity: 0.8;
+    }
+
+    .fh-nav-item.active svg,
+    .fh-nav-item:hover svg {
+        opacity: 1;
+    }
+
+.fh-nav-badge {
+    margin-left: auto;
+    background: var(--red);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 10px;
+    min-width: 18px;
+    text-align: center;
+}
+
+.fh-sidebar-divider {
+    height: 0.5px;
+    background: rgba(255,255,255,0.1);
+    margin: 4px 18px;
+}
+
+
+/* =====================
+   SIDEBAR FLYOUT SUBMENU
+===================== */
+.fh-nav-group {
+    position: relative;
+}
+
+.fh-nav-toggle {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    justify-content: flex-start;
+}
+
+.fh-chevron {
+    width: 14px;
+    height: 14px;
+    margin-left: auto;
+    flex-shrink: 0;
+    opacity: 0.6;
+}
+
+/* Flyout panel */
+.fh-submenu {
+    position: fixed;
+    left: var(--sidebar-w);
+    background: var(--brown-dark);
+    border: 0.5px solid rgba(255,255,255,0.1);
+    border-left: 3px solid var(--red);
+    border-radius: 0 8px 8px 0;
+    padding: 8px 0;
+    min-width: 180px;
+    box-shadow: 4px 4px 16px rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 300;
+}
+
+    /* Open state */
+    .fh-submenu.open {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateX(0);
+    }
+
+/* Flyout label at top */
+.fh-submenu-label {
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 4px 16px 10px;
+    display: block;
+    border-bottom: 0.5px solid rgba(255,255,255,0.08);
+    margin-bottom: 4px;
+}
+
+.fh-nav-subitem {
+    display: block;
+    padding: 9px 16px;
+    color: rgba(245, 236, 215, 0.75);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all 0.15s;
+    white-space: nowrap;
+}
+
+    .fh-nav-subitem:hover {
+        color: var(--tan);
+        background: rgba(255,255,255,0.08);
+        border-left-color: rgba(192,57,43,0.5);
+    }
+
+    .fh-nav-subitem.active {
+        color: var(--tan);
+        background: rgba(192,57,43,0.2);
+        border-left-color: var(--red);
+    }
+
+/* On mobile flyout goes below instead of to the side */
+@media (max-width: 768px) {
+    .fh-submenu {
+        position: fixed;
+        left: 0;
+        right: 0;
+        border-radius: 0 0 8px 8px;
+        border-left: none;
+        border-top: 3px solid var(--red);
+        min-width: unset;
+    }
+}
+
+
+ /* =====================
+   LAYOUT WRAPPER
+===================== */
+    .fh-wrapper {
+    display: flex;
+    margin-top: var(--header-h);
+    min-height: calc(100vh - var(--header-h) - var(--footer-h));
+}
+
+/* =====================
+   MAIN CONTENT
+===================== */
+.fh-main {
+    margin-left: var(--sidebar-w);
+    flex: 1;
+    padding: 28px 28px 60px;
+    background: var(--cream);
+    min-width: 0;
+    transition: margin-left 0.3s ease;
+}
+
+/* =====================
+   PAGE HEADER
+   Add to top of each View:
+   <div class="fh-page-header">
+     <div class="fh-page-title">Title</div>
+     <div class="fh-page-subtitle">Subtitle</div>
+   </div>
+===================== */
+.fh-page-header {
+    margin-bottom: 24px;
+}
+
+.fh-page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--brown-dark);
+    margin-bottom: 4px;
+}
+
+.fh-page-subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* =====================
+   STAT CARDS
+===================== */
+.fh-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.fh-stat-card {
+    background: #fff;
+    border: 0.5px solid var(--tan-dark);
+    border-radius: 10px;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+}
+
+    .fh-stat-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .fh-stat-card:nth-child(1)::before {
+        background: var(--red);
+    }
+
+    .fh-stat-card:nth-child(2)::before {
+        background: var(--brown-light);
+    }
+
+    .fh-stat-card:nth-child(3)::before {
+        background: #7B8B4E;
+    }
+
+    .fh-stat-card:nth-child(4)::before {
+        background: var(--brown-dark);
+    }
+
+.fh-stat-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.fh-stat-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: var(--brown-dark);
+    line-height: 1;
+}
+
+.fh-stat-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+/* =====================
+   CONTENT PANELS
+===================== */
+.fh-panel {
+    background: #fff;
+    border: 0.5px solid var(--tan-dark);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.fh-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 0.5px solid var(--tan-dark);
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.fh-panel-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    color: var(--brown-dark);
+}
+
+/* =====================
+   BUTTONS
+===================== */
+.fh-btn-primary {
+    height: 36px;
+    padding: 0 18px;
+    background: var(--red);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+    .fh-btn-primary:hover {
+        background: var(--red-light);
+        color: #fff;
+    }
+
+.fh-btn-secondary {
+    height: 36px;
+    padding: 0 18px;
+    background: transparent;
+    color: var(--brown-mid);
+    border: 0.5px solid var(--tan-dark);
+    border-radius: 6px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+    .fh-btn-secondary:hover {
+        background: var(--tan-dark);
+        color: var(--brown-dark);
+    }
+
+/* =====================
+   STATUS BADGES
+===================== */
+.fh-badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 10px;
+    letter-spacing: 0.3px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.fh-badge-pending {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.fh-badge-approved {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.fh-badge-active {
+    background: #DBEAFE;
+    color: #1E40AF;
+}
+
+.fh-badge-returned {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+.fh-badge-inactive {
+    background: #F3F4F6;
+    color: #6B7280;
+}
+
+/* =====================
+   FORM STYLES
+===================== */
+.fh-form-group {
+    margin-bottom: 16px;
+}
+
+.fh-form-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-mid);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.fh-form-control {
+    width: 100%;
+    height: 38px;
+    padding: 0 12px;
+    border: 0.5px solid var(--tan-dark);
+    border-radius: 6px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    background: #fff;
+    color: var(--text-dark);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+    .fh-form-control:focus {
+        outline: none;
+        border-color: var(--brown-light);
+        box-shadow: 0 0 0 3px rgba(160,82,45,0.12);
+    }
+
+textarea.fh-form-control {
+    height: auto;
+    padding: 10px 12px;
+    resize: vertical;
+}
+
+/* =====================
+   ALERTS
+===================== */
+.fh-alert {
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    border-left: 3px solid transparent;
+}
+
+.fh-alert-warning {
+    background: #FEF3C7;
+    color: #92400E;
+    border-left-color: #F59E0B;
+}
+
+.fh-alert-danger {
+    background: #FEE2E2;
+    color: #991B1B;
+    border-left-color: var(--red);
+}
+
+.fh-alert-success {
+    background: #D1FAE5;
+    color: #065F46;
+    border-left-color: #10B981;
+}
+
+/* =====================
+   TABLE STYLES
+===================== */
+.fh-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+    .fh-table th {
+        text-align: left;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--text-muted);
+        padding: 10px 12px;
+        border-bottom: 0.5px solid var(--tan-dark);
+    }
+
+    .fh-table td {
+        padding: 12px 12px;
+        border-bottom: 0.5px solid var(--tan-dark);
+        color: var(--text-dark);
+        vertical-align: middle;
+    }
+
+    .fh-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .fh-table tr:hover td {
+        background: var(--cream);
+    }
+
+/* =====================
+   FOOTER
+===================== */
+.fh-footer {
+    height: var(--footer-h);
+    background: var(--brown-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px 0 calc(var(--sidebar-w) + 24px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 150;
+    transition: padding-left 0.3s ease;
+}
+
+.fh-footer-text {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.fh-footer-links {
+    display: flex;
+    gap: 16px;
+}
+
+.fh-footer-link {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+    .fh-footer-link:hover {
+        color: var(--tan);
+    }
+
+/* =====================
+   RESPONSIVE — TABLET
+   (max-width: 1024px)
+===================== */
+@media (max-width: 1024px) {
+    .fh-stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =====================
+   RESPONSIVE — MOBILE
+   (max-width: 768px)
+===================== */
+@media (max-width: 768px) {
+
+    /* Show hamburger, hide brand text */
+    .fh-hamburger {
+        display: flex;
+    }
+
+    .fh-brand {
+        width: auto;
+        padding: 0 14px;
+    }
+
+    .fh-brand-tagline {
+        display: none;
+    }
+
+    /* Sidebar slides off screen by default */
+    .fh-sidebar {
+        transform: translateX(-100%);
+        bottom: 0;
+        box-shadow: 4px 0 20px rgba(0,0,0,0.2);
+    }
+
+        /* Sidebar open state */
+        .fh-sidebar.open {
+            transform: translateX(0);
+        }
+
+    /* Show overlay when sidebar open */
+    .fh-sidebar-overlay {
+        display: block;
+    }
+
+    /* Main content takes full width */
+    .fh-main {
+        margin-left: 0;
+        padding: 20px 16px 60px;
+    }
+
+    /* Footer full width on mobile */
+    .fh-footer {
+        padding: 0 16px;
+    }
+
+    /* Stack stats single column */
+    .fh-stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    /* Panel header stack on small screens */
+    .fh-panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Hide non-essential table columns on mobile */
+    .fh-table .fh-hide-mobile {
+        display: none;
+    }
+}
+
+/* =====================
+   RESPONSIVE — SMALL MOBILE
+   (max-width: 480px)
+===================== */
+@media (max-width: 480px) {
+    .fh-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fh-page-title {
+        font-size: 20px;
+    }
+
+    .fh-signin-btn span {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+/*:root {
+    --sidebar-w: 220px;
+    --header-h: 58px;
+    --footer-h: 40px;
+    --brown-dark: #3D2314;
+    --brown-mid: #6B3A22;
+    --brown-light: #A0522D;
+    --tan: #F5ECD7;
+    --tan-dark: #EAD9BC;
+    --red: #C0392B;
+    --red-light: #E74C3C;
+    --cream: #FDF8F0;
+    --text-dark: #2C1A0E;
+    --text-mid: #6B3A22;
+    --text-muted: #9E7B5A;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}*/
+
+/* =====================
+           TOP NAVBAR
+        ===================== */
+/*.fh-navbar {
+    height: var(--header-h);
+    background: var(--brown-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.fh-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 18px;
+    height: 100%;
+    background: var(--brown-mid);
+    width: var(--sidebar-w);
+    text-decoration: none;
+}
+
+.fh-logo-icon {
+    width: 34px;
+    height: 34px;
+    background: var(--red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.fh-brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.fh-brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--tan);
+    letter-spacing: 0.5px;
+}
+
+.fh-brand-tagline {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.fh-navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}*/
+
+/* Bell icon button */
+/*.fh-icon-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+
+    .fh-icon-btn:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }*/
+
+/* Sign In / User button */
+/*.fh-signin-btn {
+    height: 34px;
+    padding: 0 16px;
+    background: var(--red);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+    .fh-signin-btn:hover {
+        background: var(--red-light);
+        color: #fff;
+    }*/
+
+/* =====================
+           SIDEBAR
+        ===================== */
+/*.fh-sidebar {
+    width: var(--sidebar-w);
+    background: var(--brown-mid);
+    position: fixed;
+    top: var(--header-h);
+    left: 0;
+    bottom: var(--footer-h);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    z-index: 99;
+}
+
+.fh-sidebar-section {
+    padding: 16px 0 8px;
+}
+
+.fh-sidebar-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 0 18px 8px;
+    display: block;
+}
+
+.fh-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 18px;
+    color: rgba(245, 236, 215, 0.7);
+    font-size: 13.5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    border-left: 3px solid transparent;
+    text-decoration: none;
+}
+
+    .fh-nav-item:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--tan);
+        border-left-color: rgba(192, 57, 43, 0.5);
+    }
+
+    .fh-nav-item.active {
+        background: rgba(192, 57, 43, 0.2);
+        color: var(--tan);
+        border-left-color: var(--red);
+    }
+
+    .fh-nav-item svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+        opacity: 0.8;
+    }
+
+    .fh-nav-item.active svg,
+    .fh-nav-item:hover svg {
+        opacity: 1;
+    }
+
+.fh-nav-badge {
+    margin-left: auto;
+    background: var(--red);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 10px;
+    min-width: 18px;
+    text-align: center;
+}
+
+.fh-sidebar-divider {
+    height: 0.5px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 8px 18px;
+}*/
+
+/* =====================
+           MAIN CONTENT AREA
+        ===================== */
+/*.fh-wrapper {
+    display: flex;
+    margin-top: var(--header-h);
+    min-height: calc(100vh - var(--header-h) - var(--footer-h));
+}
+
+.fh-main {
+    margin-left: var(--sidebar-w);
+    flex: 1;
+    padding: 28px 28px 20px;
+    background: var(--cream);
+}*/
+
+/* =====================
+           PAGE HEADER
+           Use in each View:
+           <div class="fh-page-header">
+               <div class="fh-page-title">Page Name</div>
+               <div class="fh-page-subtitle">Subtitle here</div>
+           </div>
+        ===================== */
+/*.fh-page-header {
+    margin-bottom: 24px;
+}
+
+.fh-page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--brown-dark);
+    margin-bottom: 4px;
+}
+
+.fh-page-subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+}*/
+
+/* =====================
+           STAT CARDS (Dashboard)
+        ===================== */
+/*.fh-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.fh-stat-card {
+    background: #fff;
+    border: 0.5px solid var(--tan-dark);
+    border-radius: 10px;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+    .fh-stat-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .fh-stat-card:nth-child(1)::before {
+        background: var(--red);
+    }
+
+    .fh-stat-card:nth-child(2)::before {
+        background: var(--brown-light);
+    }
+
+    .fh-stat-card:nth-child(3)::before {
+        background: #7B8B4E;
+    }
+
+    .fh-stat-card:nth-child(4)::before {
+        background: var(--brown-dark);
+    }
+
+.fh-stat-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.fh-stat-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--brown-dark);
+    line-height: 1;
+}
+
+.fh-stat-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 6px;
+}*/
+
+/* =====================
+           CONTENT PANELS
+           Wraps tables, forms, lists
+        ===================== */
+/*.fh-panel {
+    background: #fff;
+    border: 0.5px solid var(--tan-dark);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.fh-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 0.5px solid var(--tan-dark);
+}
+
+.fh-panel-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--brown-dark);
+}*/
+
+/* =====================
+           BUTTONS
+        ===================== */
+/*.fh-btn-primary {
+    height: 34px;
+    padding: 0 16px;
+    background: var(--red);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+    .fh-btn-primary:hover {
+        background: var(--red-light);
+        color: #fff;
+    }
+
+.fh-btn-secondary {
+    height: 34px;
+    padding: 0 16px;
+    background: transparent;
+    color: var(--brown-mid);
+    border: 0.5px solid var(--tan-dark);
+    border-radius: 6px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+    .fh-btn-secondary:hover {
+        background: var(--tan-dark);
+        color: var(--brown-dark);
+    }*/
+
+/* =====================
+           STATUS BADGES
+        ===================== */
+/*.fh-badge {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 10px;
+    letter-spacing: 0.3px;
+    display: inline-block;
+}
+
+.fh-badge-pending {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.fh-badge-approved {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.fh-badge-active {
+    background: #DBEAFE;
+    color: #1E40AF;
+}
+
+.fh-badge-returned {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+.fh-badge-inactive {
+    background: #F3F4F6;
+    color: #6B7280;
+}*/
+
+/* =====================
+           FORM STYLES
+        ===================== */
+/*.fh-form-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-mid);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.fh-form-control {
+    width: 100%;
+    height: 36px;
+    padding: 0 12px;
+    border: 0.5px solid var(--tan-dark);
+    border-radius: 6px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    background: #fff;
+    color: var(--text-dark);
+    transition: border-color 0.2s;
+}
+
+    .fh-form-control:focus {
+        outline: none;
+        border-color: var(--brown-light);
+        box-shadow: 0 0 0 3px rgba(160, 82, 45, 0.1);
+    }*/
+
+/* =====================
+           ALERTS / WARNINGS
+        ===================== */
+/*.fh-alert {
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 14px;
+    border-left: 3px solid transparent;
+}
+
+.fh-alert-warning {
+    background: #FEF3C7;
+    color: #92400E;
+    border-left-color: #F59E0B;
+}
+
+.fh-alert-danger {
+    background: #FEE2E2;
+    color: #991B1B;
+    border-left-color: var(--red);
+}
+
+.fh-alert-success {
+    background: #D1FAE5;
+    color: #065F46;
+    border-left-color: #10B981;
+}*/
+
+/* =====================
+           FOOTER
+        ===================== */
+/*.fh-footer {
+    height: var(--footer-h);
+    background: var(--brown-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px 0 calc(var(--sidebar-w) + 24px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.fh-footer-text {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.fh-footer-links {
+    display: flex;
+    gap: 16px;
+}
+
+.fh-footer-link {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+    .fh-footer-link:hover {
+        color: var(--tan);
+    }*/

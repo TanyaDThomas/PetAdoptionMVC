@@ -31,7 +31,7 @@ namespace PetAdoptionMVC.ViewModels
         // Display Animal Info 
         public int AnimalId { get; set; }
         public string AnimalName { get; set; } = "";
-        public string? AnimalBreedOrSpecies { get; set; }
+        
         public int AnimalAge { get; set; }
         public string AnimalColor { get; set; } = "";
 

@@ -16,6 +16,5 @@ namespace PetAdoptionMVC.Contracts
         Task<IEnumerable<Adoption>> GetByAdopterIdAsync(int adopterId);
         Task<IEnumerable<Adoption>> GetByAnimalIdAsync(int animalId);
 
-        Task<bool> UpdateStatusAsync(int adoptionId, AdoptionStatus status);
     }
 }

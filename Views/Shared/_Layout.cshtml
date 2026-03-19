@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿@* <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -30,9 +30,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Adopter" asp-action="Index">Adopters</a>
                         </li>
 
-                        @* <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Animal" asp-action="Index">Animals</a>
-                        </li> *@
+                     
 
                         <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" 
@@ -115,5 +113,367 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html> *@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Forever Home</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Forever Home Styles -->
+    <link rel="stylesheet" href="~/css/forever-home.css" asp-append-version="true" />
+
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+
+    <!-- =====================
+         TOP NAVBAR
+    ===================== -->
+    <nav class="fh-navbar">
+
+        <!-- Logo + Brand Name -->
+        <a class="fh-brand" asp-area="" asp-controller="Home" asp-action="Index">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Paw pad (main) -->
+                <ellipse cx="18" cy="22" rx="7" ry="6" fill="#C0392B" />
+                <!-- Toe beans -->
+                <ellipse cx="11" cy="15" rx="3.2" ry="2.6" fill="#C0392B" />
+                <ellipse cx="18" cy="13" rx="3.2" ry="2.6" fill="#C0392B" />
+                <ellipse cx="25" cy="15" rx="3.2" ry="2.6" fill="#C0392B" />
+                <!-- Heart cutout on main pad -->
+                <path d="M18 26 C18 26 14 23 14 21 C14 19.5 15.5 18.5 17 19.2 C17.5 19.5 18 20 18 20 C18 20 18.5 19.5 19 19.2 C20.5 18.5 22 19.5 22 21 C22 23 18 26 18 26Z" fill="#F5ECD7" />
+            </svg>
+            <div class="fh-brand-text">
+                <span class="fh-brand-name">Forever Home</span>
+                <span class="fh-brand-tagline">Rescue Network</span>
+            </div>
+        </a>
+
+        <div class="fh-navbar-right">
+
+            <!-- Notification Bell -->
+            <a href="#" class="fh-icon-btn" title="Notifications">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(245,236,215,0.75)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                </svg>
+            </a>
+
+            <!-- Sign In — swap with Identity partial once implemented -->
+            <a class="fh-signin-btn" asp-area="" asp-controller="Account" asp-action="Login">
+                <span>Sign In</span>
+            </a>
+
+            <!-- Hamburger (mobile only — shown via CSS) -->
+            <button class="fh-hamburger" id="fh-hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </nav>
+
+    <!-- Sidebar overlay (mobile tap-to-close) -->
+    <div class="fh-sidebar-overlay" id="fh-sidebar-overlay"></div>
+
+    <!-- =====================
+         LAYOUT WRAPPER
+    ===================== -->
+    <div class="fh-wrapper">
+
+        <!-- =====================
+             SIDEBAR
+        ===================== -->
+        <nav class="fh-sidebar" id="fh-sidebar">
+
+            <div class="fh-sidebar-section">
+                <span class="fh-sidebar-label">Main</span>
+
+                <a class="fh-nav-item @(ViewData["ActivePage"]?.ToString() == "Dashboard" ? "active" : "")"
+                   asp-controller="Home" asp-action="Index">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="7" height="7" />
+                        <rect x="14" y="3" width="7" height="7" />
+                        <rect x="3" y="14" width="7" height="7" />
+                        <rect x="14" y="14" width="7" height="7" />
+                    </svg>
+                    Dashboard
+                </a>
+
+                <a class="fh-nav-item @(ViewData["ActivePage"]?.ToString() == "Adopters" ? "active" : "")"
+                   asp-controller="Adopter" asp-action="Index">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    Adopters
+                </a>
+
+                <a class="fh-nav-item @(ViewData["ActivePage"]?.ToString() == "Adoptions" ? "active" : "")"
+                   asp-controller="Adoption" asp-action="Index">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                    </svg>
+                    Adoptions
+                    @* Uncomment and wire up once pending count is available:
+                    <span class="fh-nav-badge">@ViewBag.PendingAdoptionCount</span>
+                    *@
+                </a>
+
+            </div>
+
+            <div class="fh-sidebar-divider"></div>
+
+            <div class="fh-sidebar-section">
+                <span class="fh-sidebar-label">Animals</span>
+
+                <a class="fh-nav-item @(ViewData["ActivePage"]?.ToString() == "Animals" ? "active" : "")"
+                   asp-controller="Animal" asp-action="Index">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M8 9h.01M16 9h.01M8 13c.5 1.5 2 3 4 3s3.5-1.5 4-3" />
+                    </svg>
+                    All Animals
+                </a>
+
+                <a class="fh-nav-item @(ViewData["ActivePage"]?.ToString() == "Dogs" ? "active" : "")"
+                   asp-controller="Dog" asp-action="Index">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                        <line x1="4" y1="22" x2="4" y2="15" />
+                    </svg>
+                    Dogs
+                </a>
+
+                <a class="fh-nav-item @(ViewData["ActivePage"]?.ToString() == "Cats" ? "active" : "")"
+                   asp-controller="Cat" asp-action="Index">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 5c-3.87 0-7 3.13-7 7s3.13 7 7 7 7-3.13 7-7-3.13-7-7-7z" />
+                        <path d="M9 10l-2-4 2 1M15 10l2-4-2 1" />
+                    </svg>
+                    Cats
+                </a>
+
+                @* <a class="fh-nav-item @(ViewData["ActivePage"]?.ToString() == "OtherAnimals" ? "active" : "")"
+                   asp-controller="OtherAnimal" asp-action="Index">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="8" x2="12" y2="12" />
+                        <line x1="12" y1="16" x2="12.01" y2="16" />
+                    </svg>
+                    Other Animals
+                </a> *@
+
+                <!-- Other Animals expandable submenu -->
+                <div class="fh-nav-group">
+                    <button class="fh-nav-item fh-nav-toggle
+                    @(ViewData["ActivePage"]?.ToString()?.StartsWith("Other") == true ? "active" : "")"
+                            onclick="toggleSubmenu(this)" aria-expanded="false">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>
+                        Other Animals
+                        <svg class="fh-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="fh-submenu">
+                        <span class="fh-submenu-label">Other Animals</span>
+                        <a class="fh-nav-subitem @(ViewData["ActivePage"]?.ToString() == "OtherFish" ? "active" : "")"
+                           asp-controller="Fish" asp-action="Index">Fish</a>
+                        <a class="fh-nav-subitem @(ViewData["ActivePage"]?.ToString() == "OtherBirds" ? "active" : "")"
+                           asp-controller="Bird" asp-action="Index">Birds</a>
+                        <a class="fh-nav-subitem @(ViewData["ActivePage"]?.ToString() == "OtherReptiles" ? "active" : "")"
+                           asp-controller="Reptile" asp-action="Index">Reptiles</a>
+                        <a class="fh-nav-subitem @(ViewData["ActivePage"]?.ToString() == "OtherSmall" ? "active" : "")"
+                           asp-controller="SmallAnimal" asp-action="Index">Small Animals</a>
+                        <a class="fh-nav-subitem @(ViewData["ActivePage"]?.ToString() == "OtherFarm" ? "active" : "")"
+                           asp-controller="FarmAnimal" asp-action="Index">FarmAnimals</a>
+                        <a class="fh-nav-subitem @(ViewData["ActivePage"]?.ToString() == "OtherExotic" ? "active" : "")"
+                           asp-controller="ExoticAnimal" asp-action="Index">ExoticAnimals</a>
+                        ...
+                    </div>
+
+                    @* <div class="fh-submenu">
+                        <a class="fh-nav-subitem @(ViewData["ActivePage"]?.ToString() == "OtherFish" ? "active" : "")"
+                           asp-controller="Fish" asp-action="Index">Fish</a>
+                        <a class="fh-nav-subitem @(ViewData["ActivePage"]?.ToString() == "OtherBirds" ? "active" : "")"
+                           asp-controller="Bird" asp-action="Index">Birds</a>
+                        <a class="fh-nav-subitem @(ViewData["ActivePage"]?.ToString() == "OtherReptiles" ? "active" : "")"
+                           asp-controller="Reptile" asp-action="Index">Reptiles</a>
+                        <a class="fh-nav-subitem @(ViewData["ActivePage"]?.ToString() == "OtherSmall" ? "active" : "")"
+                           asp-controller="SmallAnimal" asp-action="Index">Small Animals</a>
+                        <a class="fh-nav-subitem @(ViewData["ActivePage"]?.ToString() == "OtherFarm" ? "active" : "")"
+                           asp-controller="FarmAnimal" asp-action="Index">FarmAnimals</a>
+                        <a class="fh-nav-subitem @(ViewData["ActivePage"]?.ToString() == "OtherExotic" ? "active" : "")"
+                           asp-controller="ExoticAnimal" asp-action="Index">ExoticAnimals</a>
+
+                    </div> *@
+                </div>
+
+            </div>
+
+            <div class="fh-sidebar-divider"></div>
+
+            <div class="fh-sidebar-section">
+                <span class="fh-sidebar-label">Management</span>
+
+                <a class="fh-nav-item @(ViewData["ActivePage"]?.ToString() == "Reports" ? "active" : "")"
+                   asp-controller="Report" asp-action="Index">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                        <polyline points="10 9 9 9 8 9" />
+                    </svg>
+                    Reports
+                </a>
+
+                <a class="fh-nav-item @(ViewData["ActivePage"]?.ToString() == "Admin" ? "active" : "")"
+                   asp-controller="Admin" asp-action="Index">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3" />
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14" />
+                    </svg>
+                    Admin
+                </a>
+
+            </div>
+
+        </nav>
+
+        <!-- =====================
+             MAIN CONTENT
+             Views render here
+        ===================== -->
+        <main class="fh-main">
+            @RenderBody()
+        </main>
+
+    </div>
+
+    <!-- =====================
+         FOOTER
+    ===================== -->
+    <footer class="fh-footer">
+        <span class="fh-footer-text">&copy; @DateTime.Now.Year Forever Home Rescue Network. All rights reserved.</span>
+        <div class="fh-footer-links">
+            <a href="#" class="fh-footer-link">Privacy</a>
+            <a href="#" class="fh-footer-link">Terms</a>
+            <a href="#" class="fh-footer-link">Support</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- Responsive sidebar toggle -->
+    <script>
+        // Hamburger sidebar toggle
+        (function () {
+            const hamburger = document.getElementById('fh-hamburger-btn');
+            const sidebar = document.getElementById('fh-sidebar');
+            const overlay = document.getElementById('fh-sidebar-overlay');
+
+            function openSidebar() {
+                sidebar.classList.add('open');
+                overlay.classList.add('visible');
+                hamburger.classList.add('open');
+                hamburger.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeSidebar() {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('visible');
+                hamburger.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+
+            hamburger.addEventListener('click', function () {
+                sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+            });
+
+            overlay.addEventListener('click', closeSidebar);
+
+            document.querySelectorAll('.fh-nav-item').forEach(function (item) {
+                item.addEventListener('click', function () {
+                    if (window.innerWidth <= 768) closeSidebar();
+                });
+            });
+
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 768) closeSidebar();
+            });
+
+        })(); // <-- hamburger function ends here
+
+        // Flyout submenu
+                function toggleSubmenu(btn) {
+            const submenu = btn.nextElementSibling;
+            const isOpen = submenu.classList.contains('open');
+
+            document.querySelectorAll('.fh-submenu.open').forEach(function (s) {
+                s.classList.remove('open');
+                s.previousElementSibling.setAttribute('aria-expanded', 'false');
+            });
+
+            if (!isOpen) {
+                const rect = btn.getBoundingClientRect();
+                const submenuHeight = submenu.scrollHeight;
+                const spaceBelow = window.innerHeight - rect.top;
+                const spaceAbove = rect.bottom;
+
+                if (spaceBelow < submenuHeight && spaceAbove > spaceBelow) {
+                    // Not enough room below — flip upward
+                    submenu.style.top = 'auto';
+                    submenu.style.bottom = (window.innerHeight - rect.bottom) + 'px';
+                } else {
+                    // Enough room below — open downward as normal
+                    submenu.style.top = rect.top + 'px';
+                    submenu.style.bottom = 'auto';
+                }
+
+                submenu.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        // Close flyout when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.fh-nav-group')) {
+                document.querySelectorAll('.fh-submenu.open').forEach(function (s) {
+                    s.classList.remove('open');
+                    s.previousElementSibling.setAttribute('aria-expanded', 'false');
+                });
+            }
+        });
+    </script>
+       
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>

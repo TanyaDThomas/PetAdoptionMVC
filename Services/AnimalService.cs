@@ -50,6 +50,7 @@ namespace PetAdoptionMVC.Services
         public async Task<IEnumerable<Animal>> GetAllAsync()
         {
             return await _context.Animals
+                .AsNoTracking()
                 .Where(a => a.IsActive)
                 .ToListAsync();
         }
@@ -57,6 +58,7 @@ namespace PetAdoptionMVC.Services
         public async Task<IEnumerable<Animal>> GetAllAdoptedAsync()
         {
             return await _context.Animals
+                .AsNoTracking()
                 .Where(a => a.IsAdopted == true && a.IsActive)
                 .ToListAsync();
         }
@@ -64,6 +66,7 @@ namespace PetAdoptionMVC.Services
         public async Task<IEnumerable<Animal>> GetAllAvailableAsync()
         {
             return await _context.Animals
+                .AsNoTracking()
                .Where(a => a.IsAdopted == false && a.IsActive)
                .ToListAsync();
         }
@@ -71,6 +74,7 @@ namespace PetAdoptionMVC.Services
         public async Task<IEnumerable<Animal>> GetAnimalsByShelterId(int shelterId)
         {
             return await _context.Animals
+                .AsNoTracking()
                 .Where(a => a.ShelterId == shelterId && a.IsActive)
                 .ToListAsync();
         }
@@ -78,6 +82,7 @@ namespace PetAdoptionMVC.Services
         public async Task<IEnumerable<Animal>> GetAvailableByTypeAsync(AnimalType type)
         {
             return await _context.Animals
+                .AsNoTracking()
                 .Where(a => a.AnimalType == type && a.IsAdopted == false && a.IsActive)
                 .ToListAsync();
         }
@@ -91,6 +96,7 @@ namespace PetAdoptionMVC.Services
         public async Task<IEnumerable<Animal>> GetByTypeAsync(AnimalType type)
         {
             return await _context.Animals
+                .AsNoTracking()
                 .Where(a => a.AnimalType == type && a.IsActive)
                 .ToListAsync();
         }
@@ -98,6 +104,7 @@ namespace PetAdoptionMVC.Services
         public async Task<IEnumerable<Animal>> GetRecentlyAddedAsync(int count)
         {
             return await _context.Animals
+                .AsNoTracking()
                 .Where(a => a.IsActive)
                 .OrderByDescending(a => a.CreatedOn)
                 .Take(count)
@@ -107,6 +114,7 @@ namespace PetAdoptionMVC.Services
         public async Task<IEnumerable<Animal>> SearchAsync(AnimalSearchFilter filter)
         {
             var query = _context.Animals
+                .AsNoTracking()
                 .Where(a => a.IsActive);
 
             if (!string.IsNullOrEmpty(filter.Name))

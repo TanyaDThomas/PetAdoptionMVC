@@ -50,6 +50,8 @@ namespace PetAdoptionsMVC.Service
 
         //READ
 
+        //MAY ADD THIS OPTION LATER - NOT SURE
+
         //public async Task<IEnumerable<Adopter>> GetAdoptersWithReturnHistoryAsync()
         //{
         //    return await _context.Adopters
@@ -62,6 +64,7 @@ namespace PetAdoptionsMVC.Service
         public async Task<IEnumerable<Adopter>> GetAllAsync()
         {
             return await _context.Adopters
+                .AsNoTracking()
                  .Where(a => a.IsActive)
                  .ToListAsync();
         }
@@ -76,6 +79,7 @@ namespace PetAdoptionsMVC.Service
         public async Task<IEnumerable<Adopter>> SearchAsync(AdopterSearchFilter filter)
         {
             var query = _context.Adopters
+                .AsNoTracking()
                 .Where(a => a.IsActive);
 
             if (!string.IsNullOrWhiteSpace(filter.Name))

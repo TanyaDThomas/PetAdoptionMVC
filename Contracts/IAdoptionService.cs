@@ -9,6 +9,7 @@ namespace PetAdoptionMVC.Contracts
      
         Task<Adoption> CreateAsync(Adoption adoption);
         Task<bool> UpdateAsync(Adoption adoption);
+        Task<bool> UpdateStatusAsync(int adoptionId, AdoptionStatus status);
         Task<bool> DeactivateAsync(int id);
        
     }
