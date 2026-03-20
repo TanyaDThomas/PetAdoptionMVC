@@ -1,21 +1,77 @@
 ﻿@model PetAdoptionMVC.ViewModels.AdoptionCreateViewModel
-
 @{
     ViewData["Title"] = "Create a New Adoption";
+    ViewData["ActivePage"] = "Adoptions";
 }
 
 <h2>Add a New Adoption</h2>
 <br />
 
-<form asp-action="Create">
+<form asp-action="Create" method="post">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-    <h4>Basic Information</h4>
+    @* ---- ADOPTER ---- *@
+    <h4>Adopter</h4>
     <hr />
 
-    <div class="row">
+    <div class="row mb-3">
         <div class="col-md-6">
-            <label 
+            <label asp-for="AdopterId" class="form-label">Select Adopter</label>
+            <select asp-for="AdopterId" asp-items="Model.AdopterList" class="form-control">
+                <option value="">-- Select Adopter --</option>
+            </select>
+            <span asp-validation-for="AdopterId" class="text-danger"></span>
         </div>
     </div>
+
+    @* ---- ANIMAL ---- *@
+    <h4>Animal</h4>
+    <hr />
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+        <label asp-for="AnimalType" class="form-label">Select Type of Animal</label>
+        <select asp-for="AnimalType" asp-items="Model.AnimalTypeList" class="form-control">
+             <option value=""> -- Select Animal Type --</option>
+             </select>    
+             <span asp-validation-for="AnimalType" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="AnimalId" class="form-label">Select Animal</label>
+            <select asp-for="AnimalId" asp-items="Model.AnimalList" class="form-control">
+                <option value=""> -- Select Animal --</option>
+            </select>
+            <span asp-validation-for="AnimalId" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-sm-6">
+            <label asp-for="AdoptionFee" class="form-label">Adoption Fee</label>
+            <input asp-for="AdoptionFee" class="form-control" placeholder="@Model.AdoptionFee"/>
+            <span asp-validation-for="AdoptionFee" class="text-danger"></span>
+        </div>
+    </div>
+        
+
+    @* ---- HIDDEN FIELDS ---- *@
+    @* Always keep these on the form to preserve state *@
+    <input type="hidden" asp-for="AdoptionDate" />
+    <input type="hidden" asp-for="Status" />
+
+    @* ---- SUBMIT ---- *@
+  
+        <div class="mt-4">
+            <button type="submit" class="btn btn-success">Complete Adoption</button>
+            <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+        </div>
+    
+
 </form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

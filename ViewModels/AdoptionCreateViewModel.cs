@@ -1,4 +1,5 @@
-﻿using PetAdoptionMVC.Models.Enums;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using PetAdoptionMVC.Models.Enums;
 
 namespace PetAdoptionMVC.ViewModels
 {
@@ -17,9 +18,14 @@ namespace PetAdoptionMVC.ViewModels
         public string? AdopterName { get; set; }
         public string? AnimalName { get; set; }
 
-        // Sselected and ready to submit yet?
+        // Sselected and ready to submit 
         public bool AdopterSelected => AdopterId.HasValue;
         public bool AnimalSelected => AnimalId.HasValue;
         public bool ReadyToSubmit => AdopterSelected && AnimalSelected;
+
+        // Dropdown Search List
+        public SelectList? AdopterList { get; set; }
+        public SelectList? AnimalList { get; set; }
+        public SelectList? AnimalTypeList {  get; set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.AspNetCore.Mvc.Rendering;
 using PetAdoptionMVC.Contracts;
 using PetAdoptionMVC.Models;
 using PetAdoptionMVC.Models.Enums;
@@ -136,6 +136,30 @@ namespace PetAdoptionMVC.Controllers
                     viewModel.AnimalType = animal.AnimalType;
                 }
             }
+
+            // For SelectList Dropdown
+            var adopters = await _adopterQueryService.GetAllAsync();
+            viewModel.AdopterList = new SelectList(
+                adopters.Select(a => new { a.Id, FullName = $"{a.FirstName} {a.LastName}" }),
+                "Id",
+                "FullName"
+            );
+
+            viewModel.AnimalTypeList = new SelectList(
+                Enum.GetValues(typeof(AnimalType))
+                    .Cast<AnimalType>()
+                    .Select(a => new { Value = (int)a, Text = a.ToString() }),
+                "Value",
+                "Text"
+            );
+
+            var animals = await _animalQueryService.GetAllAvailableAsync();
+            viewModel.AnimalList = new SelectList(
+                animals.Select(a => new { a.Id, a.Name }),
+                "Id",
+                "Name"
+            );
+
 
             return View(viewModel);
         }
