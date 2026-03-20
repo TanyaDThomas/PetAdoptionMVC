@@ -1,4 +1,4 @@
-﻿@model PetAdoptionMVC.Models.Adoption
+﻿@model PetAdoptionMVC.ViewModels.AdoptionEditViewModel
 
 @{
     ViewData["Title"] = "Edit Adoption";
@@ -6,3 +6,47 @@
 
 <h2>Edit Adoption Information</h2>
 <br />
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+     <input type="hidden" asp-for="AdopterId" />
+    <input type="hidden" asp-for="AnimalId" />
+    <div asp-validation-for="ModelOnly" class="text-danger"></div>
+
+    <h4>@Model.AdopterName Adoption of @Model.AnimalName</h4>
+    <hr />
+
+    <div class="row mb-3">
+        <div class="col-sm-6">
+            <label asp-for="AdoptionFee" class="form-label">Edit Adoption Fee</label>
+            <input asp-for="AdoptionFee" class="form-control" placeholder="@Model.AdoptionFee"/>
+            <span asp-validation-for="AdoptionFee" class="text-danger"></span>
+        </div>
+
+        <div class="col-sm-6">
+            <label asp-for="Status" class="form-label">Edit Adoption Status</label>
+            <select asp-for="Status" asp-items="Model.StatusOptions" class="form-control">
+                <option value="">-- Select Status --</option>
+            </select>
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>
+
+        <div class="col-sm-6">
+            <label asp-for="AdoptionDate" class="form-label">Edit Adoption Date</label>
+            <input asp-for="AdoptionDate" class="form-control" type="date"/>
+            <span asp-validation-for="AdoptionDate" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </div>
+
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
