@@ -17,9 +17,6 @@ This project is being built as a portfolio piece while learning ASP.NET Core MVC
 ---
 ## Screenshots
 
-### Adoption Details
-![Adoption Details](Screenshots/AdoptionDetails.png)
-
 ### Animal List
 ![Animal List](Screenshots/AnimalsList.png)
 
