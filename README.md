@@ -15,6 +15,21 @@ Forever Home Rescue Network is a full-stack pet adoption management system built
 This project is being built as a portfolio piece while learning ASP.NET Core MVC, Entity Framework Core, and SQL Server. It is intentionally scoped to grow over time as new skills are learned, including Identity/authentication, JavaScript, and React.
 
 ---
+## Screenshots
+
+### Adoption Details
+![Adoption Details](Screenshots/AdoptionDetails.png)
+
+### Animal List
+![Animal List](Screenshots/AnimalsList.png)
+
+### Animal Details
+![Animal Details](Screenshots/AnimalDetails.png)
+
+### AnimalEdit
+![Edit Animal](Screenshots/AnimalEdit.png)
+
+---
 
 ## Tech Stack
 
