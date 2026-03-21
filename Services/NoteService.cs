@@ -1,4 +1,6 @@
-﻿using PetAdoptionMVC.Contracts;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using PetAdoptionMVC.Contracts;
 using PetAdoptionMVC.Data;
 using PetAdoptionMVC.Models;
 using PetAdoptionMVC.Models.Enums;
@@ -14,54 +16,149 @@ namespace PetAdoptionMVC.Services
             _context = context;
         }
 
-        public Task<Note> CreateAsync(Note note)
+        //WRITE
+        public async Task<Note> CreateAsync(Note note)
         {
-            throw new NotImplementedException();
+            note.CreatedOn = DateTime.Now;
+            note.CreatedBy = "System";
+            note.IsActive = true;
+            _context.Notes.Add(note);
+            await _context.SaveChangesAsync();
+            return note;
         }
 
-        public Task<bool> DeactivateAsync(int id)
+        public async Task<bool> DeactivateAsync(int id)
         {
-            throw new NotImplementedException();
+            var note = await _context.Notes.FindAsync(id);
+            if (note == null) return false;
+            note.UpdatedOn = DateTime.Now;
+            note.UpdatedBy = "System";
+            note.IsActive = false;
+            await _context.SaveChangesAsync();
+            return true;
         }
 
-        public Task<IEnumerable<Note>> GetByAdopterIdAsync(int adopterId)
+        public async Task<bool> UpdateAsync(Note note)
         {
-            throw new NotImplementedException();
+            try
+            {
+                note.UpdatedOn = DateTime.Now;
+                note.UpdatedBy = "System";
+                _context.Entry(note).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch(DbUpdateConcurrencyException)
+            {
+                return false;
+            }
+
         }
 
-        public Task<IEnumerable<Note>> GetByAnimalIdAsync(int animalId)
+
+       
+
+        //READ 
+        public async Task<IEnumerable<Note>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Notes
+                .AsNoTracking()
+                  .Where(n => n.IsActive)
+                  .ToListAsync();
         }
 
-        public Task<IEnumerable<Note>> GetByCategoryAsync(NoteCategory category)
+        public async Task<Note?> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Notes
+                .FindAsync(id);
         }
 
-        public Task<IEnumerable<Note>> GetByEntityIdAsync(int entityId)
+        public async Task<IEnumerable<Note>> GetByEntityAsync(NoteEntityType entityType, int entityId)
         {
-            throw new NotImplementedException();
+            return await _context.Notes
+                .AsNoTracking()
+                .Where(e => e.EntityId == entityId && e.EntityType == entityType)
+                .OrderByDescending(e => e.UpdatedOn ??  e.CreatedOn)
+                .ToListAsync();
+        }
+        public async Task<IEnumerable<Note>> GetRecentByEntityAsync(NoteEntityType entityType, int entityId, int count = 3)
+        {
+            return await _context.Notes
+                .AsNoTracking()
+                .Where(e => e.EntityType == entityType && e.EntityId == entityId)
+                .OrderByDescending(e => e.UpdatedOn ?? e.CreatedOn)
+                .Take(count)
+                .ToListAsync();
         }
 
-        public Task<IEnumerable<Note>> GetByEntityTypeAsync(NoteEntityType entityType)
+        public async Task<IEnumerable<Note>> SearchAsync(NoteSearchFilter filter)
         {
-            throw new NotImplementedException();
+
+            IQueryable<Note> query = _context.Notes
+                .AsNoTracking()
+                .Where(n => n.IsActive); 
+
+            if (filter.EntityId.HasValue)
+            {
+                query = query.Where(n => n.EntityId == filter.EntityId.Value);
+            }
+
+            if(filter.IsInternal.HasValue)
+            {
+                query = query.Where(n => n.IsInternal == filter.IsInternal.Value);
+            }
+
+            if(filter.Category.HasValue)
+            {
+                query = query.Where(n => n.Category == filter.Category.Value);
+            }
+
+            if (filter.EntityType.HasValue)
+            {
+                query = query.Where(n => n.EntityType == filter.EntityType.Value);
+            }
+            
+            if(filter.CreatedFrom.HasValue)
+            {
+                query = query.Where(n => n.CreatedOn >= filter.CreatedFrom.Value);
+            }
+
+            if(filter.CreatedTo.HasValue)
+            {
+                query = query.Where(n => n.CreatedOn <= filter.CreatedTo.Value);
+            }
+
+            if (filter.UpdatedFrom.HasValue)
+            {
+                query = query.Where(n => n.UpdatedOn >= filter.UpdatedFrom.Value);
+            }
+
+            if(filter.UpdatedTo.HasValue)
+            {
+                query = query.Where(n => n.UpdatedOn <= filter.UpdatedTo.Value);
+            }
+
+            if(filter.ActiveOnly.HasValue)
+            {
+                query = query.Where(n => n.IsActive == filter.ActiveOnly.Value);
+            }
+
+
+            if(!string.IsNullOrEmpty(filter.CreatedBy))
+            {
+                query = query.Where(n => n.CreatedBy == filter.CreatedBy);
+            }
+
+            if(!string.IsNullOrEmpty(filter.UpdatedBy))
+            {
+                query = query.Where(n => n.UpdatedBy == filter.UpdatedBy);
+            }
+
+            return await query
+                .OrderByDescending(n => n.UpdatedOn ?? n.CreatedOn)
+                .ToListAsync();
         }
 
-        public Task<Note?> GetByIdAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
 
-        public Task<IEnumerable<Note>> SearchAsync(NoteSearchFilter filter)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> UpdateAsync(Note note)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

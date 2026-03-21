@@ -11,7 +11,7 @@
     <input type="hidden" asp-for="Id" />
      <input type="hidden" asp-for="AdopterId" />
     <input type="hidden" asp-for="AnimalId" />
-    <div asp-validation-for="ModelOnly" class="text-danger"></div>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
     <h4>@Model.AdopterName Adoption of @Model.AnimalName</h4>
     <hr />

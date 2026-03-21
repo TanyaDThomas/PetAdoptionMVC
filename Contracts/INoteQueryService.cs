@@ -6,12 +6,10 @@ namespace PetAdoptionMVC.Contracts
 {
     public interface INoteQueryService
     {
+        Task<IEnumerable<Note>> GetAllAsync();
         Task<Note?> GetByIdAsync(int id);
-        Task<IEnumerable<Note>> GetByEntityIdAsync(int entityId);
-        Task<IEnumerable<Note>> GetByEntityTypeAsync(NoteEntityType entityType);
-        Task<IEnumerable<Note>> GetByCategoryAsync(NoteCategory category);
-        Task<IEnumerable<Note>> GetByAdopterIdAsync(int adopterId);
-        Task<IEnumerable<Note>> GetByAnimalIdAsync(int animalId);
+        Task<IEnumerable<Note>> GetByEntityAsync(NoteEntityType entityType, int entityId);
+        Task<IEnumerable<Note>> GetRecentByEntityAsync(NoteEntityType entityType, int entityId, int count = 3);
         Task<IEnumerable<Note>> SearchAsync(NoteSearchFilter filter);
 
     }
