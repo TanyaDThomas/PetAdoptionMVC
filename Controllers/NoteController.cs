@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using PetAdoptionMVC.Contracts;
 using PetAdoptionMVC.Models;
 using PetAdoptionMVC.Models.Enums;
-using PetAdoptionMVC.ViewModels;
 using PetAdoptionMVC.SearchFilters;
 using PetAdoptionMVC.Services;
+using PetAdoptionMVC.ViewModels;
 using PetAdoptionsMVC.Service;
 
 namespace PetAdoptionMVC.Controllers
@@ -26,7 +27,49 @@ namespace PetAdoptionMVC.Controllers
         public async Task<IActionResult> Index()
         {
             var notes = await _queryService.GetAllAsync();
-            return View(notes);
+
+            var viewModels = new List<NoteIndexViewModel>();
+
+            foreach (var note in notes)
+            {
+                string entityName = "";
+
+                if (note.EntityType == NoteEntityType.Animal)
+                {
+                    var animal = await _animalQueryService.GetByIdAsync(note.EntityId);
+                    if (animal != null)
+                        entityName = animal.Name;
+                    else
+                        entityName = "Unknown";
+                }
+                else
+                {
+                    var adopter = await _adopterQueryService.GetByIdAsync(note.EntityId);
+                    if (adopter != null)
+                        entityName = $"{adopter.FirstName} {adopter.LastName}";
+                    else
+                        entityName = "Unknown";
+                }
+
+                string contentPreview;
+                if (note.Content.Length > 100)
+                    contentPreview = note.Content.Substring(0, 100) + "...";
+                else
+                    contentPreview = note.Content;
+
+                viewModels.Add(new NoteIndexViewModel
+                {
+                    Id = note.Id,
+                    EntityDisplayName = entityName,
+                    EntityType = note.EntityType,
+                    Category = note.Category,
+                    ContentPreview = contentPreview,
+                    CreatedOn = note.CreatedOn,
+                    CreatedBy = note.CreatedBy,
+                    IsInternal = note.IsInternal
+                });
+            }
+            return View(viewModels);
         }
 
         public async Task<IActionResult> Details(int id)

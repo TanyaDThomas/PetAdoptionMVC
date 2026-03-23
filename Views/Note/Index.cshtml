@@ -1,0 +1,53 @@
+﻿@model IEnumerable<PetAdoptionMVC.ViewModels.NoteIndexViewModel>
+
+    @{
+        ViewData["Title"] = "List of Notes";
+    }
+
+    <h2>List of Notes</h2>
+    <hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Entity Name</th>
+            <th>Entity Type</th>
+            <th>Category</th>
+            <th>Content Preview</th>
+            <th>Created On</th>
+            <th>Created By</th>
+            <th>Is Internal</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var note in Model)
+        {
+            <tr>
+                <td>@note.EntityDisplayName</td>
+                <td>@note.EntityType</td>
+                <td>@note.Category</td>
+                <td>@note.ContentPreview</td>
+                <td>@note.CreatedOn</td>
+                <td>@note.CreatedBy</td>
+                <td>@note.IsInternal</td>
+                <td>
+                    <a asp-action="Details" asp-controller="Note"
+                       asp-route-id="@note.Id"
+                       class="btn btn-sm btn-info">Details</a>
+                    <a asp-action="Edit" asp-controller="Note"
+                       asp-route-id="@note.Id"
+                       class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Deactivate" asp-controller="Note"
+                       asp-route-id="@note.Id"
+                       class="btn btn-sm btn-danger">Remove</a>
+
+                </td>
+            </tr>
+        }
+
+    </tbody>
+    <tfoot></tfoot>
+</table>
+
+
