@@ -85,7 +85,7 @@ namespace PetAdoptionMVC.Services
         {
             return await _context.Notes
                 .AsNoTracking()
-                .Where(e => e.EntityType == entityType && e.EntityId == entityId)
+                .Where(e => e.EntityType == entityType && e.EntityId == entityId && e.IsActive)
                 .OrderByDescending(e => e.UpdatedOn ?? e.CreatedOn)
                 .Take(count)
                 .ToListAsync();

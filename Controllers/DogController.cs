@@ -3,6 +3,7 @@ using Microsoft.JSInterop.Infrastructure;
 using PetAdoptionMVC.Contracts;
 using PetAdoptionMVC.Models;
 using PetAdoptionMVC.Models.Enums;
+using PetAdoptionMVC.ViewModels;
 
 namespace PetAdoptionMVC.Controllers
 {
@@ -10,10 +11,12 @@ namespace PetAdoptionMVC.Controllers
     {
         private readonly IAnimalQueryService _queryService;
         private readonly IAnimalService _animalService;
-        public DogController(IAnimalQueryService queryService, IAnimalService animalService)
+        private readonly INoteQueryService _noteQueryService;
+        public DogController(IAnimalQueryService queryService, IAnimalService animalService, INoteQueryService noteQueryService )
         {
             _queryService = queryService;
             _animalService = animalService;
+            _noteQueryService = noteQueryService;
         }
 
         //GET Dog
@@ -35,9 +38,18 @@ namespace PetAdoptionMVC.Controllers
                 return NotFound();
             }
             var dog = animal as Dog;
-            if (dog == null) NotFound();
-            ViewBag.ReturnUrl = returnUrl ?? "/Dog";
-            return View(dog);
+            if (dog == null) return NotFound();
+
+            var viewModel = new DogDetailsViewModel
+            {
+                Dog = dog,
+                ReturnUrl = returnUrl ?? "/Dog",
+                RecentNotes = await _noteQueryService
+                    .GetRecentByEntityAsync(NoteEntityType.Animal, id, 3)
+            };
+
+          
+            return View(viewModel);
 
         }
 

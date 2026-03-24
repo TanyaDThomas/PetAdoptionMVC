@@ -15,6 +15,7 @@ Forever Home Rescue Network is a full-stack pet adoption management system built
 This project is being built as a portfolio piece while learning ASP.NET Core MVC, Entity Framework Core, and SQL Server. It is intentionally scoped to grow over time as new skills are learned, including Identity/authentication, JavaScript, and React.
 
 ---
+
 ## Screenshots
 
 ### Animal List
@@ -23,7 +24,7 @@ This project is being built as a portfolio piece while learning ASP.NET Core MVC
 ### Animal Details
 ![Animal Details](Screenshots/AnimalDetails.png)
 
-### AnimalEdit
+### Edit Animal
 ![Edit Animal](Screenshots/AnimalEdit.png)
 
 ---
@@ -54,6 +55,12 @@ The project follows a clean layered architecture:
 
 Services are split into query (read) and command (write) interfaces, keeping responsibilities clean and making the codebase easier to maintain and test.
 
+### ViewModel Philosophy
+
+Every View has a dedicated ViewModel. Rather than passing model objects directly to Views or using ViewBag for display data, each page has a purpose-built ViewModel that contains exactly what that page needs — no more, no less. This keeps Views decoupled from the database layer and makes the codebase easier to maintain as it grows.
+
+Where multiple pages share common data, base ViewModels are used with inheritance. For example, `AnimalDetailsViewModel` is a base class that all animal type detail ViewModels inherit from, ensuring the embedded notes section is consistently available across all animal types without code duplication.
+
 ---
 
 ## Features
@@ -64,6 +71,7 @@ Services are split into query (read) and command (write) interfaces, keeping res
 - Each animal type has type-specific attributes (breed for dogs/cats, species for reptiles etc.)
 - Active/inactive status with soft delete pattern
 - Adoption status tracking (IsAdopted flag)
+- Embedded notes section on each animal detail page
 
 ### Adopters
 - Full adopter registration and management
@@ -81,6 +89,17 @@ Services are split into query (read) and command (write) interfaces, keeping res
 - Advanced search and filtering
 - Soft deactivation preserving historical records
 
+### Notes
+- Full notes system supporting both Animal and Adopter records
+- Polymorphic association — one Note class serves both entity types using EntityType and EntityId
+- Notes categorized by type: Medical, Behavior, Vaccination, Training, Special Care, Special Diet, Internal, General, Adoption Flag
+- Internal flag for staff-only notes
+- Recent notes (latest 3) embedded on animal and adopter detail pages
+- Standalone notes index with filtering by entity, category, date range, and created by
+- View All Notes link from detail pages filters to that specific entity's notes
+- Soft deactivation preserving note history
+- CreatedBy and UpdatedBy audit fields (currently "System", will be wired to Identity)
+
 ### Dashboard & Layout
 - Professional responsive dashboard layout
 - Custom branding — Forever Home Rescue Network
@@ -94,41 +113,62 @@ Services are split into query (read) and command (write) interfaces, keeping res
 
 ```
 PetAdoptionMVC/
-├── Contracts/              # Interface definitions
+├── Contracts/              # Interface definitions (read/write split)
 │   ├── IAnimalService.cs
 │   ├── IAdopterService.cs
 │   ├── IAdoptionService.cs
+│   ├── INoteService.cs
 │   └── ...
 ├── Controllers/            # HTTP request handling
 │   ├── AnimalController.cs
 │   ├── AdopterController.cs
 │   ├── AdoptionController.cs
+│   ├── NoteController.cs
 │   └── ...
 ├── Data/                   # DbContext and database configuration
+│   └── PetAdoptionDbContext.cs
 ├── Models/                 # Data classes
 │   ├── Animal.cs
 │   ├── Adopter.cs
 │   ├── Adoption.cs
-│   └── Enums/
-├── Services/               # Business logic
+│   ├── Note.cs
+│   └── Enums/              # Enum definitions
+│       ├── AnimalType.cs
+│       ├── AdoptionStatus.cs
+│       ├── NoteCategory.cs
+│       ├── NoteEntityType.cs
+│       └── ...
+├── SearchFilters/          # Search filter classes
+│   ├── AdopterSearchFilter.cs
+│   ├── AdoptionSearchFilter.cs
+│   ├── AnimalSearchFilter.cs
+│   ├── NoteSearchFilter.cs
+│   └── ...
+├── Services/               # Business logic and database operations
 │   ├── AnimalService.cs
 │   ├── AdopterService.cs
 │   ├── AdoptionService.cs
+│   ├── NoteService.cs
 │   └── ...
-├── ViewModels/             # View data objects
+├── ViewModels/             # View data objects (one per View)
 │   ├── AdoptionCreateViewModel.cs
 │   ├── AdoptionEditViewModel.cs
+│   ├── AnimalDetailsViewModel.cs  # Base class for all animal detail ViewModels
+│   ├── DogDetailsViewModel.cs     # Inherits from AnimalDetailsViewModel
+│   ├── NoteCreateViewModel.cs
+│   ├── NoteEditViewModel.cs
+│   ├── NoteIndexViewModel.cs
+│   ├── NoteDetailsViewModel.cs
 │   └── ...
 ├── Views/                  # Razor pages
 │   ├── Adoption/
 │   ├── Adopter/
 │   ├── Animal/
+│   ├── Note/
 │   └── Shared/
-├── SearchFilters/
-│   ├── AdopterSearchFilter/
-│   ├── AdoptionSearchFilter/
-│   ├── AnimalSearchFilter/
-│   └── ...
+│       ├── _Layout.cshtml
+│       └── ...
+├── Screenshots/            # Project screenshots for README
 └── wwwroot/                # Static assets
     └── css/
         └── forever-home.css
@@ -142,24 +182,45 @@ PetAdoptionMVC/
 - [x] Animal module (all types with inheritance)
 - [x] Adopter module (full CRUD with search and filtering)
 - [x] Adoption module (full CRUD with business logic)
+- [x] Notes module (full CRUD, embedded on animal detail pages, standalone index with filtering)
 - [x] Professional responsive dashboard layout
 - [x] Custom CSS design system (Forever Home brand)
 - [x] Mobile responsive sidebar with hamburger menu
 - [x] Flyout submenu navigation
 
 ### In Progress
-- [ ] Payment module
-- [ ] Notes module
+- [ ] Notes embedded section — Dog complete, pattern established. Cat, Bird, Fish, Reptile, SmallAnimal, FarmAnimal, ExoticAnimal remaining.
 - [ ] Warnings module
+- [ ] Payment module
+
+---
+
+## Architectural Decisions
+
+### ViewModels Over ViewBag
+
+During development of the Notes embedded section on animal detail pages, a deliberate decision was made to refactor the animal detail controllers to use proper ViewModels rather than using ViewBag to pass notes data to the Views.
+
+ViewBag would have been the quicker solution — a single line per controller action would have passed the notes list without any structural changes. However ViewBag is not strongly typed, offers no IntelliSense support, and makes the code harder to maintain as the project grows.
+
+Instead a base `AnimalDetailsViewModel` was created that all animal type detail ViewModels inherit from. This ensures every animal detail page automatically has access to RecentNotes, ReturnUrl, and EntityType through inheritance, with no code duplication. The Dog detail page was refactored first to establish the pattern, and the remaining animal types will follow.
+
+This decision adds short term work but results in a more maintainable, type-safe codebase — the right choice for a project intended to grow significantly over time.
+
+### Polymorphic Notes Association
+
+Notes use a polymorphic association pattern — a single Note class serves both Animal and Adopter records using `EntityType` (an enum) and `EntityId` (an integer) rather than separate foreign keys for each entity type. This keeps the Notes table clean and makes it straightforward to extend notes to additional entity types in the future without schema changes.
+
+The tradeoff is that queries always require both EntityType and EntityId together — searching by EntityId alone would return notes from multiple entity types, which would be incorrect. This constraint is enforced throughout the service layer.
 
 ---
 
 ## Roadmap
 
 ### Phase 2 — Core Business Logic (Next)
+- Complete Notes embedded section for remaining animal types
+- Warnings system (adopter flags, animal flags, compatibility checks, auto-generation on adoption creation)
 - Payment processing module
-- Notes system (per adoption and per animal)
-- Warnings system (adopter flags, animal flags, compatibility checks)
 
 ### Phase 3 — Authentication and Authorization
 - ASP.NET Core Identity implementation
@@ -175,6 +236,7 @@ PetAdoptionMVC/
 - Adoption Create: AnimalType dropdown filters Animal dropdown dynamically
 - Adoption Create: Adoption fee auto-populates when animal is selected
 - Adoption Create: Replace dropdowns with inline search modal for adopter and animal selection
+- Notes: Collapsible note cards on detail pages showing category and count
 - Dynamic search across all modules
 
 ### Phase 5 — Expanded Features
@@ -206,11 +268,16 @@ PetAdoptionMVC/
 - Adoption Create: Animal dropdown does not filter by selected AnimalType. Planned for JavaScript phase.
 - Adoption Create: Adoption fee does not auto-populate when animal is selected from dropdown. Planned for JavaScript AJAX implementation.
 - Adoption Create/Edit: Dropdown selection will be replaced with inline search modal once JavaScript is learned.
+- Notes: Detail pages currently show full note content. Collapsible cards planned for JavaScript phase.
 
 ### Pending Identity Implementation
 - CreatedBy and UpdatedBy fields currently default to "System" placeholder
 - All navigation is currently visible regardless of role
 - No authentication on any routes
+
+### Planned Refactoring
+- Animal and Adopter modules currently pass model objects directly to some Views rather than using dedicated ViewModels. Will be refactored for consistency once core modules are complete.
+- Animal navigation property missing from Adoption model — requires extra database queries in some controller actions. Will be added in a future migration.
 
 ---
 
@@ -254,6 +321,7 @@ This project is being built while learning ASP.NET Core MVC. Some architectural 
 - Implementing proper unit tests once testing patterns are learned
 - Adding FluentValidation for model validation
 - Implementing proper error handling and logging
+- Completing ViewModel refactor for Animal and Adopter modules
 
 ---
 

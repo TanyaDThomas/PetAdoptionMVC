@@ -38,10 +38,7 @@
                 <td>@(dog.IsVaccinated ? "Yes" : "No")</td>
                 <td>@(dog.IsAdopted ? "Adopted" : "Available")</td>
                 <td>
-                    @* <a asp-action="Details" asp-route-id="@dog.Id"
-                        class="btn btn-sm btn-info">Details</a> 
-                       <a asp-action="Edit" asp-route-id="@dog.Id"
-                        class="btn btn-sm btn-warning">Edit</a> *@
+                   
                     <a asp-action="Details" asp-controller="Dog"
                        asp-route-id="@dog.Id"
                        asp-route-returnUrl="/Dog"

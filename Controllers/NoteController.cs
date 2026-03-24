@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using PetAdoptionMVC.Contracts;
 using PetAdoptionMVC.Models;
@@ -24,9 +25,24 @@ namespace PetAdoptionMVC.Controllers
             _adopterQueryService = adopterQueryService;
             _animalQueryService = animalQueryService;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(NoteEntityType? entityType = null, int? entityId = null)
         {
-            var notes = await _queryService.GetAllAsync();
+            IEnumerable<Note> notes;
+
+            if (entityType.HasValue && entityId.HasValue)
+            {
+                var filter = new NoteSearchFilter
+                {
+                    EntityType = entityType,
+                    EntityId = entityId,
+                    ActiveOnly = true
+                };
+                notes = await _queryService.SearchAsync(filter);
+            }
+            else
+            {
+                notes = await _queryService.GetAllAsync();
+            }
 
             var viewModels = new List<NoteIndexViewModel>();
 
@@ -76,7 +92,40 @@ namespace PetAdoptionMVC.Controllers
         {
             var note = await _queryService.GetByIdAsync(id);
             if (note == null) return NotFound();
-            return View(note);
+
+            string entityName = "";
+            if (note.EntityType == NoteEntityType.Animal)
+            {
+                var animal = await _animalQueryService.GetByIdAsync(note.EntityId);
+                if (animal != null)
+                    entityName = animal.Name;
+                else
+                    entityName = "Unknown";
+            }
+            else
+            {
+                var adopter = await _adopterQueryService.GetByIdAsync(note.EntityId);
+                if (adopter != null)
+                    entityName = $"{adopter.FirstName} {adopter.LastName}";
+                else
+                    entityName = "Unknown";
+            }
+
+            var viewModel = new NoteDetailsViewModel
+            {
+                Id = note.Id,
+                EntityDisplayName = entityName,
+                EntityType = note.EntityType,
+                Category = note.Category,
+                Content = note.Content,
+                CreatedOn = note.CreatedOn,
+                CreatedBy = note.CreatedBy,
+                IsInternal = note.IsInternal,
+                UpdatedOn = note.UpdatedOn,
+                UpdatedBy = note.UpdatedBy,
+                
+            };
+            return View(viewModel);
         }
 
         //GET Create Note
