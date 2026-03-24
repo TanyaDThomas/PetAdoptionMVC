@@ -129,12 +129,13 @@ namespace PetAdoptionMVC.Controllers
         }
 
         //GET Create Note
-        public async Task<IActionResult> Create(NoteEntityType entityType, int entityId)
+        public async Task<IActionResult> Create(NoteEntityType entityType, int entityId, string? returnUrl = null)
         {
             var viewModel = new NoteCreateViewModel
             {
                 EntityType = entityType,
                 EntityId = entityId,
+                ReturnUrl = returnUrl
             };
 
             if (entityType == NoteEntityType.Animal)
@@ -165,10 +166,12 @@ namespace PetAdoptionMVC.Controllers
                     Category = viewModel.Category,
                     Content = viewModel.Content,
                     IsInternal = viewModel.IsInternal
+
                 };
 
                 await _noteService.CreateAsync(note);
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
+                return Redirect(viewModel.ReturnUrl ?? "/Note");
             }
             return View(viewModel);
         }

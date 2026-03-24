@@ -2,6 +2,7 @@
 using PetAdoptionMVC.Contracts;
 using PetAdoptionMVC.Models;
 using PetAdoptionMVC.Models.Enums;
+using PetAdoptionMVC.ViewModels;
 
 namespace PetAdoptionMVC.Controllers
 {
@@ -9,11 +10,13 @@ namespace PetAdoptionMVC.Controllers
     {
         private readonly IAnimalQueryService _queryService;
         private readonly IAnimalService _animalService;
+        private readonly INoteQueryService _noteQueryService;
 
-        public CatController(IAnimalQueryService queryService, IAnimalService animalService)
+        public CatController(IAnimalQueryService queryService, IAnimalService animalService, INoteQueryService noteQueryService)
         {
             _queryService = queryService;
             _animalService = animalService;
+            _noteQueryService = noteQueryService;
         }
 
         //GET Cat
@@ -27,14 +30,27 @@ namespace PetAdoptionMVC.Controllers
 
         //GET Cat  details 5
 
-        public async Task<IActionResult> Details(int id, string? returnUrl=null)
+        public async Task<IActionResult> Details(int id, string? returnUrl = null)
         {
             var animal = await _queryService.GetByIdAsync(id);
-            if (animal == null) return NotFound();
+            if (animal == null)
+            {
+                return NotFound();
+            }
             var cat = animal as Cat;
-            if(cat == null) return NotFound();
-            ViewBag.ReturnUrl = returnUrl ?? "/Cat";
-            return View(cat);
+            if (cat == null) return NotFound();
+
+            var viewModel = new CatDetailsViewModel
+            {
+                Cat = cat,
+                ReturnUrl = returnUrl ?? "/Cat",
+                RecentNotes = await _noteQueryService
+                    .GetRecentByEntityAsync(NoteEntityType.Animal, id, 3)
+            };
+
+
+            return View(viewModel);
+
         }
 
         //GET Cat Create

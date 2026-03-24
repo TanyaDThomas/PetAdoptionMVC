@@ -2,6 +2,7 @@
 using PetAdoptionMVC.Contracts;
 using PetAdoptionMVC.Models;
 using PetAdoptionMVC.Models.Enums;
+using PetAdoptionMVC.ViewModels;
 
 
 namespace PetAdoptionMVC.Controllers
@@ -10,11 +11,13 @@ namespace PetAdoptionMVC.Controllers
     {
         private readonly IAnimalQueryService _queryService;
         private readonly IAnimalService _animalService;
+        private readonly INoteQueryService _noteQueryService;
 
-        public FarmAnimalController(IAnimalQueryService queryService, IAnimalService animalService)
+        public FarmAnimalController(IAnimalQueryService queryService, IAnimalService animalService, INoteQueryService noteQueryService)
         {
             _queryService = queryService;
             _animalService = animalService;
+            _noteQueryService = noteQueryService;
         }
 
         public async Task<IActionResult> Index()
@@ -29,10 +32,20 @@ namespace PetAdoptionMVC.Controllers
         public async Task<IActionResult> Details(int id, string? returnUrl = null)
         {
             var animal = await _queryService.GetByIdAsync(id);
+            if (animal == null) return NotFound();
+
             var farmAnimal = animal as FarmAnimal;
             if (farmAnimal == null) return NotFound();
-            ViewBag.ReturnUrl = returnUrl ?? "/FarmAnimal";
-            return View(farmAnimal);
+
+            var viewModel = new FarmAnimalDetailsViewModel
+            {
+                FarmAnimal = farmAnimal,
+                ReturnUrl = returnUrl ?? "/FarmAnimal",
+                RecentNotes = await _noteQueryService.GetRecentByEntityAsync(NoteEntityType.Animal, id, 3)
+            };
+
+           
+            return View(viewModel);
         }
 
         //GET Create farm animal form

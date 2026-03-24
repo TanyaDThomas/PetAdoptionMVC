@@ -1,10 +1,10 @@
-﻿@model PetAdoptionMVC.Models.Reptile
+﻿@model PetAdoptionMVC.ViewModels.ReptileDetailsViewModel
 
 @{
     ViewData["Title"] = "Reptile Details";
 }
 
-<h2>@Model.Name Details</h2>
+<h2>@Model.Reptile.Name Details</h2>
 <hr />
 
 <div class="row ">
@@ -14,19 +14,19 @@
 
         <dl class="row">
             <dt class="col-sm-4">Name</dt>
-            <dd class="col-sm-8">@Model.Name</dd>
+            <dd class="col-sm-8">@Model.Reptile.Name</dd>
             <dt class="col-sm-4">Species</dt>
-            <dd class="col-sm-8">@Model.Species</dd>
+            <dd class="col-sm-8">@Model.Reptile.Species</dd>
             <dt class="col-sm-4">Color</dt>
-            <dd class="col-sm-8">@Model.Color</dd>
+            <dd class="col-sm-8">@Model.Reptile.Color</dd>
             <dt class="col-sm-4">Age</dt>
-            <dd class="col-sm-8">@Model.Age</dd>
+            <dd class="col-sm-8">@Model.Reptile.Age</dd>
             <dt class="col-sm-4">Date Of Birth</dt>
-            <dd class="col-sm-8">@Model.DOB.ToShortDateString()</dd>
+            <dd class="col-sm-8">@Model.Reptile.DOB.ToShortDateString()</dd>
             <dt class="col-sm-4">Adoption Fee</dt>
-            <dd class="col-sm-8">@Model.AdoptionFee.ToString("C")</dd>
+            <dd class="col-sm-8">@Model.Reptile.AdoptionFee.ToString("C")</dd>
             <dt class="col-sm-4">Status</dt>
-            <dd class="col-sm-8">@(Model.IsAdopted ? "Adopted" : "Available")</dd>
+            <dd class="col-sm-8">@(Model.Reptile.IsAdopted ? "Adopted" : "Available")</dd>
         </dl>
     </div>
 
@@ -35,22 +35,22 @@
         <hr />
         <dl class="row">
             <dt class="col-sm-5">Venomous</dt>
-            <dd class="col-sm-7">@(Model.IsVenomous ? "Yes" : "No")</dd>
+            <dd class="col-sm-7">@(Model.Reptile.IsVenomous ? "Yes" : "No")</dd>
             <dt class="col-sm-5">Handleable</dt>
-            <dd class="col-sm-7">@(Model.IsHandleable ? "Yes" : "No")</dd>
+            <dd class="col-sm-7">@(Model.Reptile.IsHandleable ? "Yes" : "No")</dd>
             <dt class="col-sm-5">Good With Kids</dt>
-            <dd class="col-sm-7">@(Model.IsGoodWithChildren ? "Yes" : "No")</dd>
+            <dd class="col-sm-7">@(Model.Reptile.IsGoodWithChildren ? "Yes" : "No")</dd>
             <dt class="col-sm-5">Good With Other Pets</dt>
-            <dd class="col-sm-7">@(Model.IsGoodWithOtherPets ? "Yes" : "No")</dd>
+            <dd class="col-sm-7">@(Model.Reptile.IsGoodWithOtherPets ? "Yes" : "No")</dd>
             
             <dt class="col-sm-5">Needs Heat Lamp</dt>
-            <dd class="col-sm-7">@(Model.NeedsHeatLamp ? "Yes" : "No")</dd>
+            <dd class="col-sm-7">@(Model.Reptile.NeedsHeatLamp ? "Yes" : "No")</dd>
             <dt class="col-sm-5">Needs UVB Light</dt>
-            <dd class="col-sm-7">@(Model.NeedsUVBLight ? "Yes" : "No")</dd>
+            <dd class="col-sm-7">@(Model.Reptile.NeedsUVBLight ? "Yes" : "No")</dd>
             <dt class="col-sm-5">Needs Humidity Control</dt>
-            <dd class="col-sm-7">@(Model.NeedsHumidityControl ? "Yes" : "No")</dd>
+            <dd class="col-sm-7">@(Model.Reptile.NeedsHumidityControl ? "Yes" : "No")</dd>
             <dt class="col-sm-5">Eats Live Food</dt>
-            <dd class="col-sm-7">@Model.EatsLiveFood</dd>
+            <dd class="col-sm-7">@Model.Reptile.EatsLiveFood</dd>
         </dl>
     </div>
     <div class="col-md-6">
@@ -58,22 +58,59 @@
         <hr />
         <dl class="row">
             <dt class="col-sm-5">Vaccinated</dt>
-            <dd class="col-sm-7">@(Model.IsVaccinated ? "Yes" : "No")</dd>
+            <dd class="col-sm-7">@(Model.Reptile.IsVaccinated ? "Yes" : "No")</dd>
             <dt class="col-sm-5">Special Care Needs</dt>
-            <dd class="col-sm-7">@(Model.HasSpecialCareNeeds ? "Yes" : "No")</dd>
+            <dd class="col-sm-7">@(Model.Reptile.HasSpecialCareNeeds ? "Yes" : "No")</dd>
             <dt class="col-sm-5">Special Diet</dt>
-            <dd class="col-sm-7">@(Model.HasSpecialDiet ? "Yes" : "No")</dd>
+            <dd class="col-sm-7">@(Model.Reptile.HasSpecialDiet ? "Yes" : "No")</dd>
         </dl>
     </div>
 </div>
 
 
-<div class="mt-3">
-    <a asp-action="Edit" asp-asp-controller="Reptile"
-       asp-route-id="@Model.Id"
-       asp-route-returnUrl="/Reptile"
-       class="btn btn-sm btn-warning">Edit</a>
+<div class="mt-4">
+    <div class="d-flex justify-content-between align-items-center">
+        <h4>Recent Notes</h4>
+        <div>
+            <a asp-action="Create" asp-controller="Note"
+               asp-route-entityType="@Model.EntityType"
+               asp-route-entityId="@Model.Reptile.Id"
+               class="btn btn-sm btn-primary">Add Note</a>
+            <a asp-action="Index" asp-controller="Note"
+               asp-route-entityType="@Model.EntityType"
+               asp-route-entityId="@Model.Reptile.Id"
+               class="btn btn-sm btn-secondary ms-2">View All Notes</a>
+        </div>
+    </div>
+    <hr />
 
-    <a href="@ViewBag.ReturnUrl" class="btn btn-secondary">Back to List</a>
+    @if (Model.RecentNotes.Any())
+    {
+        @foreach (var note in Model.RecentNotes)
+        {
+            <div class="card mb-2">
+                <div class="card-body">
+                    <strong>@note.Category</strong>
+                    <span class="text-muted float-end">@note.CreatedOn.ToShortDateString()</span>
+                    <p class="mb-0 mt-1">@note.Content</p>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p class="text-muted">No notes for this animal yet.</p>
+    }
+</div>
+
+
+
+<hr />
+
+
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model.Reptile.Id" class="btn btn-warning">Edit</a>
+
+    <a href="@Model.ReturnUrl" class="btn btn-secondary">Back to List</a>
 </div>
 

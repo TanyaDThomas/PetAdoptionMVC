@@ -1,10 +1,10 @@
-﻿@model PetAdoptionMVC.Models.Adopter
+﻿@model PetAdoptionMVC.ViewModels.AdopterDetailsViewModel
 
 @{
     ViewData["Title"] = "Adopter Details";
 }
 
-<h2>@Model.FirstName @Model.LastName Details</h2>
+<h2>@Model.Adopter.FirstName @Model.Adopter.LastName Details</h2>
 <hr />
 
 
@@ -15,28 +15,28 @@
 
         <dl>
             <dt class="col-sm-4">First Name</dt>
-            <dd class="col-sm-8">@Model.FirstName</dd>
+            <dd class="col-sm-8">@Model.Adopter.FirstName</dd>
 
             <dt class="col-sm-4">Last Name</dt>
-            <dd class="col-sm-8">@Model.LastName</dd>
+            <dd class="col-sm-8">@Model.Adopter.LastName</dd>
 
             <dt class="col-sm-4">Address </dt>
-            <dd class="col-sm-8">@Model.Address</dd>
+            <dd class="col-sm-8">@Model.Adopter.Address</dd>
 
             <dt class="col-sm-4">City</dt>
-            <dd class="col-sm-8">@Model.City</dd>
+            <dd class="col-sm-8">@Model.Adopter.City</dd>
 
             <dt class="col-sm-4">State</dt>
-            <dd class="col-sm-8">@Model.State</dd>
+            <dd class="col-sm-8">@Model.Adopter.State</dd>
 
             <dt class="col-sm-4">Postal Code</dt>
-            <dd class="col-sm-8">@Model.PostalCode</dd>
+            <dd class="col-sm-8">@Model.Adopter.PostalCode</dd>
 
             <dt class="col-sm-4">Phone Number</dt>
-            <dd class="col-sm-8">@Model.PhoneNumber</dd>
+            <dd class="col-sm-8">@Model.Adopter.PhoneNumber</dd>
 
             <dt class="col-sm-4">Email</dt>
-            <dd class="col-sm-8">@Model.Email</dd>
+            <dd class="col-sm-8">@Model.Adopter.Email</dd>
 
         </dl>
     </div>
@@ -47,21 +47,62 @@
 
         <dl class="row">
             <dt class="col-sm-5">Other Pets</dt>
-            <dd class="col-sm-7">@(Model.HasOtherPets ? "Yes" : "No")</dd>
+            <dd class="col-sm-7">@(Model.Adopter.HasOtherPets ? "Yes" : "No")</dd>
 
             <dt class="col-sm-5">Small Children</dt>
-            <dd class="col-sm-7">@(Model.HasChildren ? "Yes" : "No")</dd>
+            <dd class="col-sm-7">@(Model.Adopter.HasChildren ? "Yes" : "No")</dd>
 
             <dt class="col-sm-5">Has Yard</dt>
-            <dd class="col-sm-7">@(Model.HasYard ? "Yes" : "No")</dd>
+            <dd class="col-sm-7">@(Model.Adopter.HasYard ? "Yes" : "No")</dd>
         </dl>
     </div>
 
 </div>
 
+<div class="mt-4">
+    <div class="d-flex justify-content-between align-items-center">
+        <h4>Recent Notes</h4>
+        <div>
+            <a asp-action="Create" asp-controller="Note"
+               asp-route-entityType="@Model.EntityType"
+               asp-route-entityId="@Model.Adopter.Id"
+               class="btn btn-sm btn-primary">Add Note</a>
+            <a asp-action="Index" asp-controller="Note"
+               asp-route-entityType="@Model.EntityType"
+               asp-route-entityId="@Model.Adopter.Id"
+               class="btn btn-sm btn-secondary ms-2">View All Notes</a>
+        </div>
+    </div>
+    <hr />
+
+    @if (Model.RecentNotes.Any())
+    {
+        @foreach (var note in Model.RecentNotes)
+        {
+            <div class="card mb-2">
+                <div class="card-body">
+                    <strong>@note.Category</strong>
+                    <span class="text-muted float-end">@note.CreatedOn.ToShortDateString()</span>
+                    <p class="mb-0 mt-1">@note.Content</p>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p class="text-muted">No notes for this animal yet.</p>
+    }
+</div>
+
+
+
+<hr />
+
+
 <div class="mt-3">
-    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
-    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Adopter.Id" class="btn btn-warning">Edit</a>
+
+    <a href="@Model.ReturnUrl" class="btn btn-secondary">Back to List</a>
 </div>
 
 

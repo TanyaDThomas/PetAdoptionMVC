@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PetAdoptionMVC.Contracts;
 using PetAdoptionMVC.Models;
+using PetAdoptionMVC.Models.Enums;
 using PetAdoptionMVC.SearchFilters;
+using PetAdoptionMVC.ViewModels;
 
 namespace PetAdoptionMVC.Controllers
 {
@@ -9,11 +11,13 @@ namespace PetAdoptionMVC.Controllers
     {
         private readonly IAdopterQueryService _queryService;
         private readonly IAdopterService _adopterService;
+        private readonly INoteQueryService _noteQueryService;
 
-        public AdopterController(IAdopterQueryService queryService, IAdopterService adopterService)
+        public AdopterController(IAdopterQueryService queryService, IAdopterService adopterService, INoteQueryService noteQueryService)
         {
             _queryService = queryService;
             _adopterService = adopterService;
+            _noteQueryService = noteQueryService;
         }
 
         public async Task<IActionResult> Index()
@@ -23,11 +27,20 @@ namespace PetAdoptionMVC.Controllers
         }
 
         //GET Details Adopter 3
-        public async Task<IActionResult> Details(int id)
+        public async Task<IActionResult> Details(int id, string? returnUrl = null)
         {
             var adopter = await _queryService.GetByIdAsync(id);
             if (adopter == null) return NotFound();
-            return View(adopter);
+
+            var viewModel = new AdopterDetailsViewModel
+            {
+                Adopter = adopter,
+                ReturnUrl = returnUrl ?? "/Adopter",
+                RecentNotes = await _noteQueryService
+                    .GetRecentByEntityAsync(NoteEntityType.Adopter, id, 3)
+             };
+
+            return View(viewModel);
         }
 
         //GET Create Adopter

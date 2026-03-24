@@ -2,6 +2,7 @@
 using PetAdoptionMVC.Contracts;
 using PetAdoptionMVC.Models;
 using PetAdoptionMVC.Models.Enums;
+using PetAdoptionMVC.ViewModels;
 
 namespace PetAdoptionMVC.Controllers
 {
@@ -9,11 +10,13 @@ namespace PetAdoptionMVC.Controllers
     {
         private readonly IAnimalQueryService _queryService;
         private readonly IAnimalService _animalService;
+        private readonly INoteQueryService _noteQueryService;
 
-        public ExoticAnimalController(IAnimalQueryService queryService, IAnimalService animalService)
+        public ExoticAnimalController(IAnimalQueryService queryService, IAnimalService animalService, INoteQueryService noteQueryService)
         {
             _queryService = queryService;
             _animalService = animalService;
+            _noteQueryService = noteQueryService;
         }
 
         public async Task<IActionResult> Index()
@@ -28,10 +31,21 @@ namespace PetAdoptionMVC.Controllers
         public async Task<IActionResult> Details(int id, string? returnUrl = null)
         {
             var animal = await _queryService.GetByIdAsync(id);
+            if (animal == null) return NotFound();
+
             var exoticAnimal = animal as ExoticAnimal;
             if (exoticAnimal == null) return NotFound();
-            ViewBag.ReturnUrl = returnUrl ?? "/ExoticAnimal";
-            return View(exoticAnimal);
+
+            var viewModel = new ExoticAnimalDetailsViewModel
+            {
+                ExoticAnimal = exoticAnimal,
+                ReturnUrl = returnUrl ?? "/ExoticAnimal",
+                RecentNotes = await _noteQueryService
+                    .GetRecentByEntityAsync(NoteEntityType.Animal, id, 3)
+            };
+
+           
+            return View(viewModel);
         }
 
         //GET Create Exotic Animal

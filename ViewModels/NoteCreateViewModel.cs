@@ -18,6 +18,8 @@ namespace PetAdoptionMVC.ViewModels
 
         public bool IsInternal { get; set; } = false;
 
+        public string? ReturnUrl { get; set; }
+
         // Dropdown ENUM Category List
         public IEnumerable<SelectListItem> CategoryOptions =>
             Enum.GetValues<NoteCategory>()

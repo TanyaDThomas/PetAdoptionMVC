@@ -2,6 +2,7 @@
 using PetAdoptionMVC.Contracts;
 using PetAdoptionMVC.Models;
 using PetAdoptionMVC.Models.Enums;
+using PetAdoptionMVC.ViewModels;
 
 namespace PetAdoptionMVC.Controllers
 {
@@ -9,11 +10,13 @@ namespace PetAdoptionMVC.Controllers
     {
         private readonly IAnimalQueryService _queryService;
         private readonly IAnimalService _animalService;
+        private readonly INoteQueryService _noteQueryService;
 
-        public ReptileController(IAnimalQueryService queryService, IAnimalService animalService)
+        public ReptileController(IAnimalQueryService queryService, IAnimalService animalService, INoteQueryService noteQueryService )
         {
             _queryService = queryService;
             _animalService = animalService;
+            _noteQueryService = noteQueryService;
         }
 
         public async Task<IActionResult> Index()
@@ -28,10 +31,19 @@ namespace PetAdoptionMVC.Controllers
         public async Task<IActionResult> Details(int id, string? returnUrl = null)
         {
             var animal = await _queryService.GetByIdAsync(id);
+
             var reptile = animal as Reptile;
             if (reptile == null) return NotFound();
+
+            var viewModel = new ReptileDetailsViewModel
+            {
+                Reptile = reptile,
+                ReturnUrl = returnUrl ?? "/Reptile",
+                RecentNotes = await _noteQueryService.GetRecentByEntityAsync(NoteEntityType.Animal, id, 3)
+            };
+
             ViewBag.ReturnUrl = returnUrl ?? "/Reptile";
-            return View(reptile);
+            return View(viewModel);
         }
 
         //GET Create Reptile
