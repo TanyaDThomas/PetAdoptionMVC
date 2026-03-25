@@ -20,8 +20,8 @@ namespace PetAdoptionMVC.Models
         public decimal AdoptionFee { get; set; }
 
         // For reporting and audit trails
-        public DateTime CreatedOn { get; set; } = DateTime.Now;
-        public DateTime? UpdatedOn { get; set; }
+        public DateTime CreatedOn { get; set; } = DateTime.UtcNow;
+        public DateTime? UpdatedOn { get; set; } = DateTime.UtcNow;
 
         // Curently Active - (no deletion of record)
         public bool IsActive { get; set; } = true;

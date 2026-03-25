@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PetAdoptionMVC.Contracts;
 using PetAdoptionMVC.Data;
+using PetAdoptionMVC.Processors;
 using PetAdoptionMVC.Services;
 using PetAdoptionsMVC.Service;
 
@@ -22,27 +23,28 @@ namespace PetAdoptionMVC
 
             // Animal
             builder.Services.AddScoped<IAnimalService, AnimalService>();
-            builder.Services.AddScoped<IAnimalQueryService, AnimalService>();
+            builder.Services.AddScoped<IAnimalQueryService, AnimalQueryService>();
 
             //Adopter
             builder.Services.AddScoped<IAdopterService, AdopterService>();
-            builder.Services.AddScoped<IAdopterQueryService, AdopterService>();
+            builder.Services.AddScoped<IAdopterQueryService, AdopterQueryService>();
 
             //Adoption
             builder.Services.AddScoped<IAdoptionService, AdoptionService>();
-            builder.Services.AddScoped<IAdoptionQueryService, AdoptionService>();
+            builder.Services.AddScoped<IAdoptionQueryService, AdoptionQueryService>();
 
             //Note
             builder.Services.AddScoped<INoteService, NoteService>();
-            builder.Services.AddScoped<INoteQueryService, NoteService>();
+            builder.Services.AddScoped<INoteQueryService, NoteQueryService>();
 
             //Payment
             builder.Services.AddScoped<IPaymentService, PaymentService>();
-            builder.Services.AddScoped<IPaymentQueryService, PaymentService>();
+            builder.Services.AddScoped<IPaymentQueryService, PaymentQueryService>();
+            builder.Services.AddScoped<IPaymentProcessor, MockPaymentProcessor>();
 
             //Warning
             builder.Services.AddScoped<IWarningService, WarningService >();
-            builder.Services.AddScoped<IWarningQueryServices, WarningService>();
+            builder.Services.AddScoped<IWarningQueryService, WarningQueryService>();
 
             var app = builder.Build();
 

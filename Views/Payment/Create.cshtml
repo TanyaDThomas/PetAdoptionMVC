@@ -1,0 +1,42 @@
+﻿@model PetAdoptionMVC.ViewModels.PaymentCreateViewModel
+@{
+    ViewData["Title"] = "Create a New Payment";
+}
+
+<form method="get">
+    <div class="row">
+        <div class="col-md-3">
+            <label>Status</label>
+            <select name="Status" class="form-control">
+                <option value="">All</option>
+                <option value="Completed">Completed</option>
+                <option value="Pending">Pending</option>
+                <option value="Failed">Failed</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <label>Payment Type</label>
+            <select name="PaymentType" class="form-control">
+                <option value="">All</option>
+                <option value="Cash">Cash</option>
+                <option value="Card">Card</option>
+                <option value="PayPal">PayPal</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <label>From Date</label>
+            <input type="date" name="PaymentDateFrom" class="form-control" />
+        </div>
+
+        <div class="col-md-3">
+            <label>To Date</label>
+            <input type="date" name="PaymentDateTo" class="form-control" />
+        </div>
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>

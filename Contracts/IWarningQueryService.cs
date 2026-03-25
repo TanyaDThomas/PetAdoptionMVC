@@ -3,7 +3,7 @@ using PetAdoptionMVC.Models.Enums;
 
 namespace PetAdoptionMVC.Contracts
 {
-    public interface IWarningQueryServices
+    public interface IWarningQueryService
     {
         Task<IEnumerable<Warning>> GetAllAsync();
         Task<Warning?> GetByIdAsync(int id);

@@ -18,9 +18,9 @@ namespace PetAdoptionMVC.Models
         public WarningType Type { get; set; }
         public WarningSeverity Severity { get; set; }
         public string Message { get; set; } = "";
-        public DateTime CreatedOn { get; set; } = DateTime.Now;
-        public DateTime? UpdatedOn { get; set; }
-  
+        public DateTime CreatedOn { get; set; } = DateTime.UtcNow;
+        public DateTime? UpdatedOn { get; set; } = DateTime.UtcNow;
+
         public bool IsAcknowledged { get; set; }
         public string? AcknowledgedBy { get; set; }
         public DateTime? AcknowledgedOn { get; set; }

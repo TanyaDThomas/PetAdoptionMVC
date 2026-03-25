@@ -3,6 +3,7 @@
     public enum NoteEntityType
     {
         Animal,
-        Adopter
+        Adopter,
+        Payment
     }
 }

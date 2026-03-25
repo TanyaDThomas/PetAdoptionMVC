@@ -7,6 +7,6 @@
         Failed,       
         Refunded,     
         Voided,       
-        PartialRefund
+        PartiallyRefunded
     }
 }

@@ -10,6 +10,7 @@
         SpecialCare,
         SpecialDiet,
         Vaccination,
-        Training
+        Training,
+        Payment
     }
 }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PetAdoptionMVC.Data;
 
@@ -11,9 +12,11 @@ using PetAdoptionMVC.Data;
 namespace PetAdoptionMVC.Migrations
 {
     [DbContext(typeof(PetAdoptionDbContext))]
-    partial class PetAdoptionDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260325194323_PaymentRefactor")]
+    partial class PaymentRefactor
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

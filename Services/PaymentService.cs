@@ -1,83 +1,108 @@
-﻿using PetAdoptionMVC.Contracts;
+﻿using Microsoft.EntityFrameworkCore;
+using PetAdoptionMVC.Contracts;
 using PetAdoptionMVC.Data;
 using PetAdoptionMVC.Models;
 using PetAdoptionMVC.Models.Enums;
 using PetAdoptionMVC.SearchFilters;
+using System.Data;
 
 namespace PetAdoptionMVC.Services
 {
-    public class PaymentService : IPaymentQueryService, IPaymentService
+    public class PaymentService : IPaymentService
     {
         private readonly PetAdoptionDbContext _context;
-        public PaymentService(PetAdoptionDbContext context)
+        private readonly IPaymentProcessor _paymentProcessor;
+        public PaymentService(PetAdoptionDbContext context, IPaymentProcessor paymentProcessor)
         {
             _context = context;
+            _paymentProcessor = paymentProcessor;
         }
 
-        public Task<IEnumerable<Payment>> GetAllAsync()
+        // PAYMENT CRUD OPERATIONS
+
+        public async Task<Payment> ProcessPaymentAsync(PaymentRequest request)
         {
-            throw new NotImplementedException();
+            var result = await _paymentProcessor.ProcessAsync(request);
+
+            var payment = new Payment
+            {
+                Amount = request.Amount,
+                Type = request.Type,
+                Status = result.Status,
+                PaymentDate = DateTime.UtcNow,
+                PaymentToken = request.PaymentToken,
+                ReceiptNumber = result.TransactionId,
+                Notes = request.Notes,
+                AdopterId = request.AdopterId,
+                AdoptionId = request.AdoptionId,
+                CreatedOn = DateTime.UtcNow
+
+            };
+
+            _context.Set<Payment>().Add(payment);
+            await _context.SaveChangesAsync();
+
+            return payment;
         }
 
-        public Task<IEnumerable<Payment>> GetByAdopterIdAsync(int adopterId)
+        public async Task<bool> RefundAsync(int paymentId)
         {
-            throw new NotImplementedException();
+            var payment = await _context.Set<Payment>().FindAsync(paymentId);
+            if (payment == null || payment.Status != PaymentStatus.Completed)
+            {
+                return false;
+            }
+
+            payment.Status = PaymentStatus.Refunded;
+            payment.RefundedAmount = payment.Amount;
+            payment.UpdatedOn = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+            return true;
+
         }
 
-        public Task<IEnumerable<Payment>> GetByAdoptionIdAsync(int adoptionId)
+        public async Task<bool> VoidPaymentAsync(int paymentId)
         {
-            throw new NotImplementedException();
+            var payment = await _context.Set<Payment>().FindAsync(paymentId);
+            if (payment == null || payment.Status != PaymentStatus.Pending)
+            {
+                return false;
+            }
+
+            payment.Status = PaymentStatus.Voided;
+            payment.UpdatedOn = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+            return true;
         }
 
-        public Task<Payment?> GetByIdAsync(int id)
+        public async Task<bool> PartialRefundAsync(int paymentId, decimal amount)
         {
-            throw new NotImplementedException();
+            var payment = await _context.Set<Payment>().FindAsync(paymentId);
+            if (payment == null || payment.Status != PaymentStatus.Completed || amount <= 0 || amount > payment.Amount)
+                return false;
+
+            payment.RefundedAmount += amount;
+
+            // Update status
+            payment.Status = payment.RefundedAmount == payment.Amount
+                ? PaymentStatus.Refunded
+                : PaymentStatus.PartiallyRefunded;
+
+            payment.UpdatedOn = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+            return true;
         }
 
-        public Task<IEnumerable<Payment>> GetByStatusAsync(PaymentStatus status)
-        {
-            throw new NotImplementedException();
-        }
 
-        public Task<IEnumerable<Payment>> GetByTypeAsync(PaymentType type)
-        {
-            throw new NotImplementedException();
-        }
 
-        public Task<decimal> GetTotalByAdopterAsync(int adopterId)
-        {
-            throw new NotImplementedException();
-        }
 
-        public Task<decimal> GetTotalByDateRangeAsync(DateTime from, DateTime to)
-        {
-            throw new NotImplementedException();
-        }
 
-        public Task<bool> PartialRefundAsync(int paymentId, decimal amount)
-        {
-            throw new NotImplementedException();
-        }
 
-        public Task<Payment> ProcessPaymentAsync(Payment payment)
-        {
-            throw new NotImplementedException();
-        }
 
-        public Task<bool> RefundAsync(int paymentId)
-        {
-            throw new NotImplementedException();
-        }
 
-        public Task<IEnumerable<Payment>> SearchAsync(PaymentSearchFilter filter)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> VoidPaymentAsync(int paymentId)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
 

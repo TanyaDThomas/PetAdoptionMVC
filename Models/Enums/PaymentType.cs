@@ -5,7 +5,6 @@
         Cash,
         Check,
         CreditCard,
-        Debit,
         PayPal
     }
 }

@@ -15,7 +15,7 @@ namespace PetAdoptionMVC.Models
 
         public string Content { get; set; } = "";
 
-        public DateTime CreatedOn { get; set; } = DateTime.Now;
+        public DateTime CreatedOn { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedOn { get; set; }
 
         public bool IsInternal { get; set; } = false;

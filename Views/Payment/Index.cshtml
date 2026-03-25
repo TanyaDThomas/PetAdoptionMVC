@@ -1,0 +1,92 @@
+﻿@model IEnumerable<PetAdoptionMVC.ViewModels.PaymentListViewModel>
+
+
+@{
+    ViewData["Title"] = "List of Payments";
+}
+
+<h2>Payments</h2>
+
+<p> <a asp-action="Create" class="btn btn-primary">Create New Payment</a></p>
+
+<form method="get">
+    <div class="row">
+        <div class="col-md-3">
+            <label>Status</label>
+            <select name="Status" class="form-control">
+                <option value="">All</option>
+                <option value="Completed">Completed</option>
+                <option value="Pending">Pending</option>
+                <option value="Failed">Failed</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <label>Payment Type</label>
+            <select name="PaymentType" class="form-control">
+                <option value="">All</option>
+                <option value="Cash">Cash</option>
+                <option value="Card">Card</option>
+                <option value="PayPal">PayPal</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <label>From Date</label>
+            <input type="date" name="PaymentDateFrom" class="form-control" />
+        </div>
+
+        <div class="col-md-3">
+            <label>To Date</label>
+            <input type="date" name="PaymentDateTo" class="form-control" />
+        </div>
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Amount</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Adopter</th>
+            <th>Receipt</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Amount.ToString("C")</td>
+                <td>@item.Type</td>
+                <td>
+                    @if (item.Status == "Completed")
+                    {
+                        <span class="text-success">@item.Status</span>
+                    }
+                    else if (item.Status == "Failed")
+                    {
+                        <span class="text-danger">@item.Status</span>
+                    }
+                    else
+                    {
+                        <span>@item.Status</span>
+                    }
+                </td>
+                <td>@item.PaymentDate.ToShortDateString()</td>
+                <td>@item.AdopterId</td>
+                <td>@item.ReceiptNumber</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot></tfoot>
+</table>
