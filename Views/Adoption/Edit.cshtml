@@ -8,6 +8,8 @@
 <br />
 
 <form asp-action="Edit">
+    @Html.AntiForgeryToken()
+    @Html.AntiForgeryToken()
     <input type="hidden" asp-for="Id" />
      <input type="hidden" asp-for="AdopterId" />
     <input type="hidden" asp-for="AnimalId" />

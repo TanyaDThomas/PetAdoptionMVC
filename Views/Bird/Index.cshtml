@@ -49,10 +49,12 @@
                        asp-route-returnUrl="/Bird"
                        class="btn btn-sm btn-warning">Edit</a>
 
-                    <a asp-action="Deactivate" asp-controller="Bird"
-                        asp-route-id="@bird.Id"
-                        asp-route-returnUrl="/Bird"
-                        class="btn btn-sm btn-danger">Remove</a>
+                    <form asp-action="Deactivate" asp-controller="Bird"
+                          asp-route-id="@bird.Id"
+                          method="post"
+                          class="d-inline">
+                        <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+                    </form>
                 </td>
             </tr>
         }

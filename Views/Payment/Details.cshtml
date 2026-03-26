@@ -1,0 +1,76 @@
+﻿@model PetAdoptionMVC.ViewModels.PaymentDetailsViewModel
+
+@{
+    ViewData["Title"] = "Payment Details";
+}
+
+<h2>Payment Details</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Amount</th>
+        <td>@Model.Amount.ToString("C")</td>
+    </tr>
+    <tr>
+        <th>Status</th>
+        <td>@Model.Status</td>
+    </tr>
+    <tr>
+        <th>Type</th>
+        <td>@Model.Type</td>
+    </tr>
+    <tr>
+        <th>Payment Date</th>
+        <td>@Model.PaymentDate.ToString("g")</td>
+    </tr>
+    <tr>
+        <th>Adoption ID</th>
+        <td>@Model.AdoptionId</td>
+    </tr>
+    <tr>
+        <th>Adopter ID</th>
+        <td>@Model.AdopterId</td>
+    </tr>
+    <tr>
+        <th>Donor / Payer</th>
+        <td>@(string.IsNullOrEmpty(Model.FirstName) ? "N/A" : $"{Model.FirstName} {Model.LastName}")</td>
+    </tr>
+    <tr>
+        <th>Card / Payment Info</th>
+        <td>
+            @if (!string.IsNullOrEmpty(Model.LastFourDigits))
+            {
+                <span>Card ending @Model.LastFourDigits</span>
+            }
+            else if (!string.IsNullOrEmpty(Model.CheckNumber))
+            {
+                <span>Check #@Model.CheckNumber</span>
+            }
+            else if (!string.IsNullOrEmpty(Model.PaypalEmail))
+            {
+                <span>PayPal: @Model.PaypalEmail</span>
+            }
+            else
+            {
+                <span>Cash / Other</span>
+            }
+        </td>
+    </tr>
+    <tr>
+        <th>Receipt Number</th>
+        <td>@Model.ReceiptNumber</td>
+    </tr>
+    <tr>
+        <th>Notes</th>
+        <td>@Model.Notes</td>
+    </tr>
+    <tr>
+        <th>Failure Reason</th>
+        <td>@Model.FailureReason</td>
+    </tr>
+</table>
+<a asp-action="Edit" asp-controller="Payment"
+   asp-route-id="@Model.Id"
+   class="btn btn-warning me-2">Edit</a>
+
+<a asp-action="Index" class="btn btn-secondary">Back to Payments List</a>

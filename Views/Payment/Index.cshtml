@@ -47,6 +47,8 @@
     <button type="submit" class="btn btn-primary">Search</button>
 </form>
 
+<br />
+
 <table class="table table-striped">
     <thead>
         <tr>
@@ -60,31 +62,42 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var payment in Model)
         {
             <tr>
-                <td>@item.Amount.ToString("C")</td>
-                <td>@item.Type</td>
+                <td>@payment.Amount.ToString("C")</td>
+                <td>@payment.Type</td>
                 <td>
-                    @if (item.Status == "Completed")
+                    @if (payment.Status == "Completed")
                     {
-                        <span class="text-success">@item.Status</span>
+                        <span class="text-success">@payment.Status</span>
                     }
-                    else if (item.Status == "Failed")
+                    else if (payment.Status == "Failed")
                     {
-                        <span class="text-danger">@item.Status</span>
+                        <span class="text-danger">@payment.Status</span>
                     }
                     else
                     {
-                        <span>@item.Status</span>
+                        <span>@payment.Status</span>
                     }
                 </td>
-                <td>@item.PaymentDate.ToShortDateString()</td>
-                <td>@item.AdopterId</td>
-                <td>@item.ReceiptNumber</td>
+                <td>@payment.PaymentDate.ToShortDateString()</td>
+                <td>@payment.AdopterId</td>
+                <td>@payment.ReceiptNumber</td>
+            
                 <td>
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a asp-action="Details" asp-controller="Payment"
+                       asp-route-id="@payment.Id"
+                       class="btn btn-sm btn-info">Details</a>
+                    <a asp-action="Edit" asp-controller="Payment"
+                       asp-route-id="@payment.Id"
+                       class="btn btn-sm btn-warning">Edit</a>
+                    <form asp-action="Deactivate" asp-controller="Payment" asp-route-id="@payment.Id" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+                    </form>
+
                 </td>
+                
             </tr>
         }
     </tbody>

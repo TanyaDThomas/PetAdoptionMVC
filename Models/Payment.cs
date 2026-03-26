@@ -19,6 +19,8 @@ namespace PetAdoptionMVC.Models
         public int? AdoptionId { get; set; } //Could be donation
         public int? AdopterId { get; set; }
 
+        public string? FirstName { get; set;  }
+        public string? LastName { get; set; }
         
         public string? PaymentToken { get; set; }
         public string? LastFourDigits { get; set; }
@@ -31,10 +33,12 @@ namespace PetAdoptionMVC.Models
         public string? ReceiptNumber { get; set; }
         public decimal RefundedAmount { get; set; } = 0;
 
+
         // May add to note system later
         public string? Notes { get; set; }
         public string? FailureReason { get; set; }
         public bool IsActive { get; set; } = true;
+
 
         // For staff accountability
         public DateTime CreatedOn { get; set; } = DateTime.UtcNow;

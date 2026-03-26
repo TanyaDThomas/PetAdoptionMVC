@@ -262,7 +262,9 @@ namespace PetAdoptionMVC.Controllers
             return View(viewModel);
         }
 
-        // GET: /Adoption/Deactivate/5
+        // POST: /Adoption/Deactivate/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Deactivate(int id)
         {
             await _adoptionService.DeactivateAsync(id);

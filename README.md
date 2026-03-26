@@ -100,8 +100,18 @@ Where multiple pages share common data, base ViewModels are used with inheritanc
 - Soft deactivation preserving note history
 - CreatedBy and UpdatedBy audit fields (currently "System", will be wired to Identity)
 
+### Payments
+- Fully implemented payment module with service layer abstraction
+- Mock payment processor designed to be replaceable with Stripe or another provider
+- Supports multiple payment types (Card, Cash, Check, PayPal)
+- Tracks payment status (Pending, Completed, Failed, Refunded, Voided)
+- Failure handling with user-facing messages
+- Receipt and transaction tracking
+- Supports adoption payments, donations, and general services
+- Designed to separate payment processing logic from controller logic
+
 ### Dashboard & Layout
-- Professional responsive dashboard layout
+- Professional responsive dashboard layout (coming soon)
 - Custom branding — Forever Home Rescue Network
 - Collapsible sidebar navigation with mobile hamburger menu
 - Flyout submenu for animal type navigation
@@ -183,15 +193,17 @@ PetAdoptionMVC/
 - [x] Adopter module (full CRUD with search and filtering)
 - [x] Adoption module (full CRUD with business logic)
 - [x] Notes module (full CRUD, embedded on animal detail pages, standalone index with filtering)
+- [x] Payment module with mock processor and failure handling
 - [x] Professional responsive dashboard layout
 - [x] Custom CSS design system (Forever Home brand)
 - [x] Mobile responsive sidebar with hamburger menu
 - [x] Flyout submenu navigation
 
 ### In Progress
-- [ ] Notes embedded section — Dog complete, pattern established. Cat, Bird, Fish, Reptile, SmallAnimal, FarmAnimal, ExoticAnimal remaining.
 - [ ] Warnings module
-- [ ] Payment module
+- [ ] Identity & Roles
+- [ ] Add CreatedOn, CreatedBy, UpdatedOn, UpdatedBy, and IsActive to base class
+- [ ] May add payments notes to note system (haven't decided yet)
 
 ---
 
@@ -212,6 +224,10 @@ This decision adds short term work but results in a more maintainable, type-safe
 Notes use a polymorphic association pattern — a single Note class serves both Animal and Adopter records using `EntityType` (an enum) and `EntityId` (an integer) rather than separate foreign keys for each entity type. This keeps the Notes table clean and makes it straightforward to extend notes to additional entity types in the future without schema changes.
 
 The tradeoff is that queries always require both EntityType and EntityId together — searching by EntityId alone would return notes from multiple entity types, which would be incorrect. This constraint is enforced throughout the service layer.
+
+### Payment Abstraction
+
+The payment system uses a processor abstraction. This allows the current mock implementation to be replaced with a real provider such as Stripe without changing controller logic.
 
 ---
 
@@ -258,6 +274,7 @@ The tradeoff is that queries always require both EntityType and EntityId togethe
 - Separate public website pulling available animals
 - Location based animal browsing
 - Online adoption inquiry submission
+- Online donation payments (mock)
 - React frontend (planned)
 
 ---

@@ -42,9 +42,12 @@
                        asp-route-id="@adopter.Id"
                        class="btn btn-sm btn-warning">Edit</a>
 
-                    <a asp-action="Deactivate" asp-controller="Adopter"
-                       asp-route-id="@adopter.Id"
-                       class="btn btn-sm btn-danger">Remove</a>
+                    <form asp-action="Deactivate" asp-controller="Adopter"
+                          asp-route-id="@adopter.Id"
+                          method="post"
+                          class="d-inline">
+                        <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+                    </form>
                  </td>
             </tr>
         }

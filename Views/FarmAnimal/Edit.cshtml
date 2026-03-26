@@ -9,6 +9,7 @@
 
 <form asp-action="Edit">
     <input type="hidden" asp-for="Id" />
+    @Html.AntiForgeryToken()
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
     <h4>Basic Information</h4>

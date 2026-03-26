@@ -1,42 +1,83 @@
 ﻿@model PetAdoptionMVC.ViewModels.PaymentCreateViewModel
+
 @{
-    ViewData["Title"] = "Create a New Payment";
+    ViewData["Title"] = "Create Payment";
 }
 
-<form method="get">
-    <div class="row">
-        <div class="col-md-3">
-            <label>Status</label>
-            <select name="Status" class="form-control">
-                <option value="">All</option>
-                <option value="Completed">Completed</option>
-                <option value="Pending">Pending</option>
-                <option value="Failed">Failed</option>
-            </select>
-        </div>
+<h2>Create Payment</h2>
 
-        <div class="col-md-3">
-            <label>Payment Type</label>
-            <select name="PaymentType" class="form-control">
-                <option value="">All</option>
-                <option value="Cash">Cash</option>
-                <option value="Card">Card</option>
-                <option value="PayPal">PayPal</option>
-            </select>
-        </div>
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label asp-for="Amount"></label>
+        <input asp-for="Amount" class="form-control" />
+        <span asp-validation-for="Amount" class="text-danger"></span>
+    </div>
 
-        <div class="col-md-3">
-            <label>From Date</label>
-            <input type="date" name="PaymentDateFrom" class="form-control" />
-        </div>
+    <div class="form-group">
+        <label asp-for="Type"></label>
+        <select asp-for="Type" class="form-control">
+            <option value="">-- Select Payment Type --</option>
+            <option value="Cash">Cash</option>
+            <option value="Check">Check</option>
+            <option value="CreditCard">Credit Card</option>
+            <option value="Debit">Debit</option>
+            <option value="PayPal">PayPal</option>
+        </select>
+        <span asp-validation-for="Type" class="text-danger"></span>
+    </div>
 
-        <div class="col-md-3">
-            <label>To Date</label>
-            <input type="date" name="PaymentDateTo" class="form-control" />
+    <!-- Adoption info -->
+    <input type="hidden" asp-for="AdoptionId" />
+    <input type="hidden" asp-for="AdopterId" />
+  
+
+   
+    <div class="form-group">
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" class="form-control" />
+    </div>
+
+  
+    <div id="card-fields">
+        <div class="form-group">
+            <label asp-for="LastFourDigits"></label>
+            <input asp-for="LastFourDigits" class="form-control" />
         </div>
     </div>
 
-    <br />
+    <div id="check-fields">
+        <div class="form-group">
+            <label asp-for="BankName"></label>
+            <input asp-for="BankName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="CheckNumber"></label>
+            <input asp-for="CheckNumber" class="form-control" />
+        </div>
+    </div>
 
-    <button type="submit" class="btn btn-primary">Search</button>
+    <div id="paypal-fields">
+        <div class="form-group">
+            <label asp-for="PaypalEmail"></label>
+            <input asp-for="PaypalEmail" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Notes"></label>
+        <textarea asp-for="Notes" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit Payment</button>
 </form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

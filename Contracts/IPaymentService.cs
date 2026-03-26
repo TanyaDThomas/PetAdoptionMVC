@@ -8,5 +8,7 @@ namespace PetAdoptionMVC.Contracts
         Task<bool> RefundAsync(int paymentId);
         Task<bool> VoidPaymentAsync(int paymentId);
         Task<bool> PartialRefundAsync(int paymentId, decimal amount);
+        Task UpdateAsync(Payment payment);
+
     }
 }

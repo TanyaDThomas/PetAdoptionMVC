@@ -100,7 +100,9 @@ namespace PetAdoptionMVC.Controllers
         }
 
 
-        //GET Deactivate Cat 5
+        //POST Deactivate Cat 5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Deactivate(int id)
         {
             await _animalService.DeactivateAsync(id);

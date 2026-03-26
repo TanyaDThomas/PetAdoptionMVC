@@ -83,7 +83,9 @@ namespace PetAdoptionMVC.Controllers
             return View(adopter);
         }
 
-        //GET Deactivate Adopter 3
+        //POST Deactivate Adopter 3
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Deactivate(int id)
         {
             await _adopterService.DeactivateAsync(id);
@@ -91,7 +93,7 @@ namespace PetAdoptionMVC.Controllers
         }
 
         //GET Select Adopter 4
-        // GET: /Adopter/Select
+
         public async Task<IActionResult> Select(string? name = null, string? returnUrl = null)
         {
             // Don't load anyone until staff searches

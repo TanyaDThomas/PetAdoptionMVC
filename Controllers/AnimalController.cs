@@ -80,6 +80,9 @@ namespace PetAdoptionMVC.Controllers
             };
         }
 
+        //POST: Deactive Animal
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Deactivate(int id)
         {
             await _animalService.DeactivateAsync(id);
