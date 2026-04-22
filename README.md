@@ -1,4 +1,4 @@
-# Forever Home Rescue Network
+# Forever Home Rescue Network - OOP
 ### A Pet Adoption Management System built with ASP.NET Core MVC
 
 ![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-MVC-blue)
